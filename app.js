@@ -15,7 +15,7 @@ const db = mysql.createConnection({
     password: process.env.DATABASE_PASSWORD,
     database: process.env.DATABASE
 });
-/*nehirnaz*/
+
 
 app.use(session({
     secret: 'secret', // Ensure a long random string for production
