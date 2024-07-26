@@ -51,7 +51,13 @@ router.get('/payment', authController.isLoggedIn, (req, res) => {
     }
   });
 
-  router.get('/logout', authController.logout);
+  router.get('/logout', (req, res) => {
+    res.cookie('jwt', '', {
+        expires: new Date(Date.now() + 2 * 1000), // Çerez 2 saniye sonra sona erecek
+        httpOnly: true,
+    });
 
+    res.redirect('/auth/login'); // Çıkıştan sonra ana sayfaya veya giriş sayfasına yönlendirin
+});
 
 module.exports = router;
