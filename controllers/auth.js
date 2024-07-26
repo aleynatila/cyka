@@ -27,7 +27,7 @@ exports.login = async (req, res) => {
                 return res.status(500).send('Server error');
             }
 
-            if (!results || !(await bcrypt.compare(password, results[0].password))) {
+            if (!results || results.length === 0 || !(await bcrypt.compare(password, results[0].password))) {
                 return res.status(401).render('login', {
                     message: 'Email or Password is incorrect'
                 });
@@ -57,14 +57,12 @@ exports.login = async (req, res) => {
     }
 };
 
-
 exports.register = async (req, res) => {
     console.log(req.body);
 
     const { name, email, password, confirm_password } = req.body;
 
     try {
-        // Check if the email is already in use
         const checkEmailQuery = 'SELECT email FROM users WHERE email = ?';
         db.query(checkEmailQuery, [email], async (error, results) => {
             if (error) {
@@ -82,11 +80,9 @@ exports.register = async (req, res) => {
                 });
             }
 
-            // Hash the password
             let hashedPassword = await bcrypt.hash(password, 8);
             console.log(hashedPassword);
 
-            // Insert new user into database
             const insertUserQuery = 'INSERT INTO users SET ?';
             db.query(insertUserQuery, { name: name, email: email, password: hashedPassword }, (error, results) => {
                 if (error) {
@@ -95,13 +91,9 @@ exports.register = async (req, res) => {
                 }
                 console.log(results);
 
-                // Render success message
                 res.render('register', {
                     message: 'User registered please login'
                 });
-
-                // Redirect to login page after rendering
-                res.redirect('/login');
             });
         });
     } catch (error) {
@@ -113,12 +105,10 @@ exports.register = async (req, res) => {
 exports.isLoggedIn = async (req, res, next) => {
     if (req.cookies.jwt) {
         try {
-            // Verify the token
             const decoded = await promisify(jwt.verify)(req.cookies.jwt, process.env.JWT_SECRET);
 
             console.log(decoded);
 
-            // Check if the user still exists
             db.query('SELECT * FROM users WHERE id = ?', [decoded.id], (error, result) => {
                 if (error) {
                     console.log(error);
@@ -133,7 +123,6 @@ exports.isLoggedIn = async (req, res, next) => {
                 console.log("User found:");
                 console.log(req.user);
                 return next();
-
             });
         } catch (error) {
             console.log(error);
@@ -143,4 +132,3 @@ exports.isLoggedIn = async (req, res, next) => {
         next();
     }
 };
-

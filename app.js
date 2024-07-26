@@ -4,6 +4,8 @@ const dotenv = require("dotenv");
 const path = require("path");
 const session = require("express-session");
 const cookieParser = require('cookie-parser');
+const https = require('https');
+const fs = require('fs');
 
 dotenv.config({ path: './.env' });
 
@@ -36,7 +38,6 @@ console.log(__dirname);
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 
-
 db.connect((error) => {
     if (error) {
         console.log(error);
@@ -51,16 +52,8 @@ app.use('/locales', express.static(path.join(__dirname, 'locales')));
 // Define routes
 app.use('/', require('./routes/pages'));
 app.use('/auth', require('./routes/auth'));
-/*
-app.listen(5000, () => {
-    console.log("Server started on port 5000");
-});*/
 
-//https connection
-
-const https = require('https');
-const fs = require('fs');
-
+// HTTPS connection
 const options = {
     key: fs.readFileSync('/var/www/html/certificate/private.key'),
     cert: fs.readFileSync('/var/www/html/certificate/certificate.crt')
@@ -71,4 +64,3 @@ const server = https.createServer(options, app);
 server.listen(443, () => {
     console.log('Server running on https://localhost:443/');
 });
-
