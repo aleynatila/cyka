@@ -24,3 +24,16 @@ $(window).on("load", function() {
         $(this).next().text(filename);
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const galleryBlocks = document.querySelectorAll('.gallery-block');
+
+    galleryBlocks.forEach(block => {
+        block.style.opacity = 0;
+        block.style.transition = 'opacity 1s ease-in-out';
+        setTimeout(() => {
+            block.style.opacity = 1;
+        }, 200);
+    });
+});
+

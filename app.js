@@ -8,14 +8,13 @@ const cookieParser = require('cookie-parser');
 dotenv.config({ path: './.env' });
 
 const app = express();
-
+/*
 const db = mysql.createConnection({
     host: process.env.DATABASE_HOST,
     user: process.env.DATABASE_USER,
     password: process.env.DATABASE_PASSWORD,
     database: process.env.DATABASE
-});
-
+});*/
 
 app.use(session({
     secret: 'secret', // Ensure a long random string for production
@@ -23,7 +22,6 @@ app.use(session({
     saveUninitialized: false,
     cookie: { secure: false } // set secure: true if using HTTPS
 }));
-
 
 const publicDirectory = path.join(__dirname, 'public');
 app.use(express.static(publicDirectory));
@@ -38,23 +36,28 @@ console.log(__dirname);
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 
-
+/*
 db.connect((error) => {
     if (error) {
         console.log(error);
     } else {
         console.log("MySQL connected...");
     }
-});
+});*/
+
+// Define a route to serve language files
+app.use('/locales', express.static(path.join(__dirname, 'locales')));
 
 // Define routes
 app.use('/', require('./routes/pages'));
 app.use('/auth', require('./routes/auth'));
 
-app.listen(80, () => {
-    console.log("Server started on port 80");
+app.listen(5000, () => {
+    console.log("Server started on port 5000");
 });
 
+//https connection
+/*
 const https = require('https');
 const fs = require('fs');
 
@@ -68,3 +71,4 @@ const server = https.createServer(options, app);
 server.listen(443, () => {
     console.log('Server running on https://localhost:443/');
 });
+*/

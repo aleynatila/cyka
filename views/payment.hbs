@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>Cyka AI - Be Always a Step Ahead</title>
+
+<!-- Stylesheets -->
+<link href="/css/bootstrap.css" rel="stylesheet">
+<link href="/css/style.css" rel="stylesheet">
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+<link rel="icon" href="/images/favicon.png" type="image/x-icon">
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<link href="/css/responsive.css" rel="stylesheet">
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]--> 
+
+</head>
+
+<body class="home-one">
+  <div class="page-wrapper"> 
+
+    <!-- Preloader -->
+
+    <div class="preloader"></div> 
+    <!-- Main Header-->
+     
+        <header class="main-header header-one">
+        <!-- Header Upper -->
+        <div class="header-upper">        
+            <div class="auto-container">
+                <!-- Main Box -->
+                <div class="main-box clearfix">
+                    <!--Logo-->
+                    <div class="logo-box clearfix">
+                         <div class="logo"><a href="/" title="CykaAI"><img src="/images/logo-1.png" alt="" title="CykaAI"></a></div>
+                         <div class="lang-box">
+                            <a href="#" class="theme-btn lang-btn">EN <i class="arrow fa fa-caret-down"></i></a
+                            >
+                            <ul class="lang-list">
+                                <li><a href="/cryplight-package/index-tr.html">Tr</a></li>
+                                <li><a href="/cryplight-package/index-es.html">Es</a></li>
+                                <li><a href="/cryplight-package/index-ru.html">Ru</a></li>
+                                <li><a href="/cryplight-package/index-de.html">De</a></li>
+                            </ul>
+                         </div>
+                    </div>
+
+                    <div class="nav-box clearfix">
+                        <!--Nav Outer-->
+                        <div class="nav-outer clearfix">         
+                            <nav class="main-menu">
+                                <ul class="navigation clearfix" id="scroll-nav">
+                                 <li><a href="/dashboard">Home</a></li>
+                      <li><a href="/transactions">Transaction</a></li>
+                      <li><a href="#documents">Whitepaper</a></li>
+                      <li><a href="#roadmap">Roadmap</a></li>
+                    <li><a href="#contact-section">Contact</a></li>
+                                </ul>
+                            </nav>
+                            <!-- Main Menu End-->                        </div>
+                        <!--Nav Outer End-->
+   {{#if user}}
+                        <div class="links-box clearfix">
+                             <div class="link"><a href="/auth/dashboard" class="theme-btn btn-style-two"><span class="txt">Hello, {{user.name}}</span></a></div>
+                            <div class="link"><a href="/auth/logout" class="theme-btn btn-style-two"><span class="txt">Logout</span></a></div>
+                        
+                        </div>
+   {{else}}
+      <div class="links-box clearfix">
+                            <div class="link"><a href="/register" class="theme-btn btn-style-one" style="
+    padding-left: 25px;
+"><span class="txt">Sign up</span></a></div>
+                            <div class="link"><a href="/login" class="theme-btn btn-style-two"><span class="txt">Login</span></a></div>
+                        </div>
+   {{/if}}
+
+                        <!-- Hidden Nav Toggler -->
+                        <div class="nav-toggler">
+                            <button class="hidden-bar-opener"><span class="icon"><i class="fa-regular fa-bars"></i></span></button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--End Main Header -->
+
+    
+    <!--Menu Backdrop-->
+    <div class="menu-backdrop"></div>
+
+    <!-- Hidden Navigation Bar -->
+    <section class="hidden-bar">
+        <!-- Hidden Bar Wrapper -->
+        <div class="hidden-bar-wrapper">
+            <div class="hidden-bar-closer"><span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14"><path d="M15 0L1 14m14 0L1 0" stroke="#101010" fill="none" fill-rule="evenodd"></path></svg></span></div>
+            <div class="nav-logo-box">
+                <div class="logo"><a href="/" title="CykaAI"><img src="//images/logo-1.png" alt="" title="CykaAI"></a></div>
+            </div>
+            <!-- .Side-menu -->
+            <div class="side-menu">
+                 <ul class="navigation custom-links clearfix" id="scroll-nav-2">
+                <li><a href="/dashboard">Home</a></li>
+                      <li><a href="/transactions">Transaction</a></li>
+                      <li><a href="#documents">Whitepaper</a></li>
+                      <li><a href="#roadmap">Roadmap</a></li>
+                    <li><a href="#contact-section">Contact</a></li>
+                </ul>
+            </div><!-- /.Side-menu -->
+            
+            <div class="links-box clearfix">
+                <div class="clearfix">
+                    <div class="link"><a href="/register" class="theme-btn btn-style-one"><span class="txt">Sign up</span></a></div>
+                    <div class="link"><a href="/login" class="theme-btn btn-style-two"><span class="txt">Login</span></a></div>
+                </div>
+            </div>
+        
+        </div><!-- / Hidden Bar Wrapper -->
+    </section>
+    
+    <!-- / Hidden Bar -->
+
+   <!--Allocation Section-->
+    <br>
+   <br>
+   <br>
+
+
+   <!--Payment Selection Section-->
+<section class="payment-selection">
+    <div class="auto-container">
+        <div class="card selection-card">
+            <p class="selection-title">Please choose a payment method:</p>
+             <ul class="selection-list">
+                <li class="selection-item">
+                    <div class="checkbox-container">
+                        <label class="checkbox-label" for="payment1">
+                            <span>Bitcoin (Bep-20)</span>
+                        </label>
+                    </div>
+                    <div class="address-box">
+                                  
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="text-align: center; display:block; align-items:center; margin-top:13px;
+                                    margin-left:13px; margin-bottom:13px;" width="24px" height="24px" viewBox="0 0 240 240" 
+                                    enable-background="new 0 0 226.777 226.777" xml:space="preserve" fill="#7d7d7d"><g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> 
+                                        <path id="BCN_alt" fill="#7d7d7d" d="M190.199,97.104c0,0,21.134-12.992,21.134-35.948c0-22.955-22.226-52.22-57.207-52.22 c-21.23,0-98.253,0-98.253,0v64.118H0v27.328h55.873v36.254H0v27.327h55.873v53.879c0,0,68.688,0,90.966,0 c42.996,0,79.797-23.453,79.797-66.087C226.635,109.131,190.199,97.104,190.199,97.104z M138.459,37.713 c18.22,0,36.802,8.74,36.802,28.602c0,19.858-19.675,29.876-37.896,29.876c-12.376,0-32.462,0-44.087,0V37.713 C104.517,37.713,125.57,37.713,138.459,37.713z M144.614,183.458c-13.597,0-35.606,0-51.336,0V120.06c10.479,0,29.068,0,51.012,0 c33.885,0,47.909,14.023,47.909,34.613C192.199,175.26,167.571,183.458,144.614,183.458z"></path> 
+                                    </g></svg>
+                        <input type="text" name="bitcoinAddress" id="bitcoinAddress" placeholder="Bitcoin Address" value="0xced3ca87edc1911d3edc70bf2741c67687e21de7" readonly>
+                    </div>
+                </li>
+
+                <li class="selection-item">
+                    <div class="checkbox-container">
+                        <label class="checkbox-label" for="payment2">
+                            <span>Tether (Bep-20)</span>
+                        </label>
+                    </div>
+                    <div class="address-box">
+                   <svg xmlns="http://www.w3.org/2000/svg" style="text-align: center; display:block; align-items:center; margin-top:13px;
+                                    margin-left:13px; margin-bottom:13px;" width="24" height="24" viewBox="0 0 16 16">
+                                        <path fill="#7d7d7d" d="M3 2h10v2.38H3zm6.5 6.76v5.25h-3V8.76z"></path>
+                                        <path fill="#7d7d7d" d="M8 5.75c-3.66 0-6.62.73-6.62 1.62S4.35 8.99 8 8.99s6.62-.73 6.62-1.62S11.65 5.75 8 5.75m0 2.5c-3.38 0-6.12-.5-6.12-1.12S4.62 6.01 8 6.01s6.12.5 6.12 1.12S11.38 8.25 8 8.25"></path>
+                                        <path fill="#7d7d7d" d="M8 7.88c.52 0 1.02-.01 1.5-.04V3.75h-3v4.09c.48.02.98.04 1.5.04"></path>
+                                    </svg>
+                        <input type="text" name="tetherAddress" id="tetherAddress" placeholder="Tether Address" value="0xced3ca87edc1911d3edc70bf2741c67687e21de7" readonly>
+                    </div>
+                </li>
+
+                <li class="selection-item">
+                    <div class="checkbox-container">
+                        <label class="checkbox-label" for="payment3">
+                            <span>BNB Smart Chain (Bep-20)</span>
+                        </label>
+                    </div>
+                    <div class="address-box">
+                   <svg xmlns="http://www.w3.org/2000/svg" style="text-align: center; display:block; align-items:center; margin-top:13px;
+                            margin-left:13px; margin-bottom:13px;" width="24" height="24" viewBox="0 0 24 24">
+                                        <g fill="none">
+                                            <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"></path>
+                                            <path fill="#7d7d7d" d="M14.866 19.345a1 1 0 0 1-.366 1.366l-1.25.722a2.5 2.5 0 0 1-2.5 0L9.5 20.71a1 1 0 0 1 1-1.732l1.25.722a.5.5 0 0 0 .5 0l1.25-.722a1 1 0 0 1 1.366.366Zm4.928-8.226a1 1 0 0 1 1 1v3.515a2.5 2.5 0 0 1-1.25 2.165L16.5 19.557a1 1 0 1 1-1-1.733l3.044-1.757a.5.5 0 0 0 .25-.433v-3.515a1 1 0 0 1 1-1m-15.588 0a1 1 0 0 1 1 1v3.515a.5.5 0 0 0 .25.433L8.5 17.824a1 1 0 0 1-1 1.732L4.456 17.8a2.5 2.5 0 0 1-1.25-2.165V12.12a1 1 0 0 1 1-1Zm11.419-3.654l.119.057l1.513.858a1 1 0 0 1 .5.758l.006.12l-.013 1.74a1 1 0 0 1-.402.793l-.098.065l-2.75 1.588v3.176a1 1 0 0 1-.396.797l-.098.066l-1.5.88a1 1 0 0 1-.892.06l-.12-.06l-1.5-.88a1 1 0 0 1-.487-.746L9.5 16.62v-3.177l-2.75-1.587a1 1 0 0 1-.492-.742l-.008-.117l-.013-1.74a1 1 0 0 1 .406-.811l.1-.066l1.514-.858a1 1 0 0 1 .875-.055l.118.059L12 9.113l2.75-1.587a1 1 0 0 1 .875-.061m2.004 5.805v1.403a1 1 0 0 1-.5.866l-1.215.701a.3.3 0 0 1-.45-.26v-1.403a1 1 0 0 1 .5-.866l1.215-.701a.3.3 0 0 1 .45.26m-10.87-.287l.062.027l1.215.701a1 1 0 0 1 .493.749l.007.117v1.403a.3.3 0 0 1-.389.287l-.061-.027l-1.215-.701a1 1 0 0 1-.493-.748l-.007-.118V13.27a.3.3 0 0 1 .326-.3l.063.013Zm11.49-7.53l1.295.748a2.5 2.5 0 0 1 1.25 2.165v1.443a1 1 0 1 1-2 0V8.366a.5.5 0 0 0-.25-.433l-1.295-.748a1 1 0 0 1 1-1.732m-11.177.392a1 1 0 0 1-.366 1.366l-1.25.722a.5.5 0 0 0-.25.433v1.443a1 1 0 1 1-2 0V8.366A2.5 2.5 0 0 1 4.456 6.2l1.25-.722a1 1 0 0 1 1.366.366ZM12.5 5.79l1.215.701a.3.3 0 0 1 0 .52L12.5 7.71a1 1 0 0 1-1 0l-1.215-.701a.3.3 0 0 1 0-.52L11.5 5.79a1 1 0 0 1 1 0m.75-3.222l3.044 1.757a1 1 0 1 1-1 1.733L12.25 4.299a.5.5 0 0 0-.5 0L8.706 6.056a1 1 0 1 1-1-1.732l3.044-1.757a2.5 2.5 0 0 1 2.5 0Z"></path>
+                                        </g>
+                                    </svg>
+                        <input type="text" name="binanceAddress" id="binanceAddress" placeholder="Binance Coin Address" value="0xced3ca87edc1911d3edc70bf2741c67687e21de7" readonly>
+                    </div>
+                </li>
+
+                <li class="selection-item">
+                    <div class="checkbox-container">
+                        <label class="checkbox-label" for="payment4">
+                            <span>TRX (Bep-20)</span>
+                        </label>
+                    </div>
+                    <div class="address-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="text-align: center; display:block; align-items:center; margin-top:13px;
+                            margin-left:13px; margin-bottom:13px;" width="24" height="24" viewBox="0 0 32 32">
+                                        <g fill="none">
+                                            <path fill="#7d7d7d"d="M16 0c8.837 0 16 7.163 16 16s-7.163 16-16 16S0 24.837 0 16 7.163 0 16 0zM7.5 7.257l7.595 19.112 10.583-12.894-3.746-3.562L7.5 7.257zm16.252 6.977l-7.67 9.344.983-8.133 6.687-1.21zM9.472 9.488l6.633 5.502-1.038 8.58L9.472 9.487zM21.7 11.083l2.208 2.099-6.038 1.093 3.83-3.192zM10.194 8.778l10.402 1.914-4.038 3.364-6.364-5.278z"></path>
+                                        </g>
+                                    </svg>
+                                
+                        <input type="text" name="tronAddress" id="tronAddress" placeholder="TRON Address" value="0x7efb267fe150fc5691470ff2ff5232e18f826940" readonly>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="divider"></div>
+
+<div class="wrapper">
+ <input type="radio" name="select" id="option-1" checked>
+ <input type="radio" name="select" id="option-2">
+ <input type="radio" name="select" id="option-3">
+ <input type="radio" name="select" id="option-4">
+   <label for="option-1" class="option option-1">
+     <div class="dot"></div>
+      <span>BTC</span>
+      </label>
+   <label for="option-2" class="option option-2">
+     <div class="dot"></div>
+      <span>Tether</span>
+   </label>
+      <label for="option-3" class="option option-3">
+     <div class="dot"></div>
+      <span>BNB</span>
+   </label>
+      <label for="option-4" class="option option-4">
+     <div class="dot"></div>
+      <span>TRX</span>
+   </label>
+</div>
+
+            <ul class="summary-list">
+                <li class="summary-item">
+                    <div class="summary-label">
+                        <p class="summary-title">Amount (USD)</p>
+                    </div>
+                    <input type="number" name="amount" id="amount" placeholder="Amount" min="10" value="10" required>
+                </li>
+
+                <li class="summary-item">
+                    <div class="summary-label">
+                        <p class="summary-title">Description</p>
+                    </div>
+                    <input type="text" name="description" id="description" placeholder="Description" value="Payment for services" readonly>
+                </li>
+
+                <button type="submit" id="submitPayment" class="submit-button">Proceed</button>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SVG Symbol Definitions -->
+    <svg style="display: none;">
+        <defs>
+            <symbol id="check-icon" viewBox="0 0 12 10">
+                <polyline points="1.5 6 4.5 9 10.5 1" fill="none" stroke="#fff" stroke-width="2"></polyline>
+            </symbol>
+        </defs>
+    </svg>
+</section>
+
+
+
+
+
+
+
+    <!--FAQs Section-->
+    <section class="faqs-section">
+        <div class="auto-container">
+            <div class="inner-container">
+                <div class="title-box">
+                    <h6 class="subtitle"><span>FAQs</span></h6>
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                <div class="row clearfix">
+                    <!--Text Column-->
+                    <div class="text-col col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                        <div class="inner">
+                            <div class="tabs-box">
+                                <div class="tab-buttons">
+                                    <ul class="clearfix">
+                                        <li class="tab-btn active-btn" data-tab="#f-tab-1"><span>General AI</span></li>
+                                        <li class="tab-btn" data-tab="#f-tab-2"><span>Cyka AI</span></li>
+                                    </ul>
+                                </div>
+                                <div class="tabs-content">
+                                    <!--Tab 1 - General AI-->
+                                    <div class="tab active-tab" id="f-tab-1">
+                                        <div class="tab-inner">
+                                            <div class="accordion-box clearfix">
+                                                <div class="accordion block">
+                                                    <div class="acc-btn">What is Artificial Intelligence (AI)? <i class="fa-regular fa-angle-down"></i></div>
+                                                    <div class="acc-content">
+                                                        <div class="content">
+                                                            <div class="text">Artificial Intelligence (AI) refers to the simulation of human intelligence in machines that are programmed to think, learn, and solve problems.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion block">
+                                                    <div class="acc-btn">How does AI benefit businesses? <i class="fa-regular fa-angle-down"></i></div>
+                                                    <div class="acc-content">
+                                                        <div class="content">
+                                                            <div class="text">AI benefits businesses by automating tasks, improving decision-making, enhancing customer experiences, and increasing efficiency.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion block">
+                                                    <div class="acc-btn">What are the types of AI? <i class="fa-regular fa-angle-down"></i></div>
+                                                    <div class="acc-content">
+                                                        <div class="content">
+                                                            <div class="text">The types of AI include narrow AI (focused on specific tasks), general AI (human-like intelligence), and superintelligent AI (exceeding human intelligence).</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion block">
+                                                    <div class="acc-btn">What are the key features of General AI? <i class="fa-regular fa-angle-down"></i></div>
+                                                    <div class="acc-content">
+                                                        <div class="content">
+                                                            <div class="text">General AI exhibits key features such as adaptability, learning ability, problem-solving skills, natural language processing, and decision-making capabilities across diverse domains.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Tab 2 - Cyka AI-->
+                                    <div class="tab" id="f-tab-2">
+                                        <div class="tab-inner">
+                                            <div class="accordion-box clearfix">
+                                                <div class="accordion block">
+                                                    <div class="acc-btn">What is Cyka AI? <i class="fa-regular fa-angle-down"></i></div>
+                                                    <div class="acc-content">
+                                                        <div class="content">
+                                                            <div class="text">Cyka AI is an advanced artificial intelligence tool designed for specific business needs, offering personalized content writing and partnership capabilities.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion block">
+                                                    <div class="acc-btn">How can Cyka AI improve content creation? <i class="fa-regular fa-angle-down"></i></div>
+                                                    <div class="acc-content">
+                                                        <div class="content">
+                                                            <div class="text">Cyka AI improves content creation by generating high-quality articles, website copy, landing pages, and digital ads in seconds, enhancing traffic and productivity.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion block">
+                                                    <div class="acc-btn">What industries can benefit from Cyka AI? <i class="fa-regular fa-angle-down"></i></div>
+                                                    <div class="acc-content">
+                                                        <div class="content">
+                                                            <div class="text">Various industries such as marketing, e-commerce, education, and healthcare can benefit from Cyka AI's capabilities in content generation, data analysis, and decision support.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion block">
+                                                    <div class="acc-btn">How does Cyka AI ensure data security and privacy? <i class="fa-regular fa-angle-down"></i></div>
+                                                    <div class="acc-content">
+                                                        <div class="content">
+                                                            <div class="text">Cyka AI ensures data security and privacy through encryption protocols, access controls, anonymization techniques, and compliance with data protection regulations.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Image Column-->
+                    <div class="image-col col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                        <div class="inner">
+                            <div class="image">
+                                <img src="/images/resource/f-image-2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <!--Contact Section-->
+<section class="contact-section" id="contact-section">
+    <div class="bg-pattern" style="background-image: url('images/background/pattern-2.png');"></div>
+    <div class="auto-container">
+        <div class="title-box centered">
+            <h6 class="subtitle"><span>Contact</span></h6>
+            <h2>Contact Cyka AI</h2>
+        </div>
+        <div class="info-box">
+            <ul class="info clearfix">
+                <li class="email"><i class="icon fa-solid fa-envelope"></i><a href="mailto:contact@cykaal.com">contact@cykaal.com</a></li>
+                <li class="phone"><i class="icon fa-solid fa-phone"></i><a href="tel: +44207223309"></a>+44207223309</a></li>
+                <li class="social"><i class="icon fa-solid fa-paper-plane"></i><a href="https://t.me/cykaAlcom">Join us on Telegram</a></li>
+            </ul>
+        </div>
+      <!--  <div class="form-box contact-form default-form">
+            <form method="post" action="/">
+                <div class="row clearfix">
+                    <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                        <div class="field-inner">
+                            <input type="text" name="username" value="" placeholder="First Name" required="">
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                        <div class="field-inner">
+                            <input type="text" name="lastname" value="" placeholder="Last Name" required="">
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                        <div class="field-inner">
+                            <input type="email" name="email" value="" placeholder="Email Address" required="">
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                        <div class="field-inner">
+                            <input type="text" name="phone" value="" placeholder="Phone Number" required="">
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                        <div class="field-inner">
+                            <textarea name="message" placeholder="Your Message ..." required=""></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                        <div class="text-center">
+                            <button class="theme-btn btn-style-one">
+                                <span class="btn-title">Submit your message</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>-->
+</section>
+
+
+    <!--Main Footer-->
+    <footer class="main-footer">
+        <div class="footer-upper">
+            <div class="auto-container">
+                <h2>Stay updated with Cyka AI</h2>
+                <div class="social-links">
+                    <ul class="social clearfix">
+                        <li><a target="_blank" href="https://www.facebook.com/profile.php?id=61563024500284" class="fab fa-facebook-f"></a></li>
+                        <li><a target="_blank" href="https://x.com/cyka_al?s=11" class="fab fa-twitter"></a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/cykaall?igsh=czhrc3RncW13a2t6&utm_source=qr" class="fab fa-instagram"></a></li>
+                        <li><a target="_blank" title="Coming Soon..." href="#" class="fab fa-linkedin-in"></a></li>
+                        <li><a target="_blank" title="Coming Soon..."href="#" class="fab fa-youtube"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="auto-container">
+                <div class="inner">
+                    <div class="copyright">Copyright &copy; 2024. All rights reserved by Cyka AI.</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+</div>
+<!--End pagewrapper--> 
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="icon"><img src="/images/icons/arrow-up.svg" alt="" title="Go To Top"></span></div>
+<script>
+      $(document).ready(function() {
+        var countdownDate = $('.time-countdown-two').data('countdown');
+        $('.time-countdown-two').countdown(countdownDate, function(event) {
+            $(this).html(event.strftime('%D gün %H:%M:%S'));
+        });
+    });
+</script>
+<script>
+    const image = document.getElementById('banner_ai');
+
+// Add a scroll event listener to the window
+window.addEventListener('scroll', () => {
+    // Get the scroll position
+    const scrollPosition = window.scrollY;
+
+    // Set the scroll threshold (in pixels)
+    const scrollThreshold = 200; // Adjust as needed
+
+    // Check if the scroll position exceeds the threshold
+    if (scrollPosition > scrollThreshold) {
+        // Add the hidden class to hide the image
+        image.classList.add('hidden');
+    } else {
+        // Remove the hidden class to show the image
+        image.classList.remove('hidden');
+    }
+});
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.rawgit.com/hilios/jQuery.countdown/2.2.0/dist/jquery.countdown.min.js"></script>
+
+<script src="/js/server.js"></script>
+<script src="/js/jquery.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/PageScroll.js"></script>
+<script src="/js/owl.js"></script>
+<script src="/js/bxslider.js"></script>
+<script src="/js/countdown.js"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/jquery-ui.js"></script>
+<script src="/js/appear.js"></script>
+<script src="/js/wow.js"></script>
+<script src="/js/custom-script.js"></script>
+</body>
+</html>

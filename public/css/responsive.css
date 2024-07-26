@@ -2,9 +2,22 @@
 	.page-wrapper{
 		overflow:hidden;	
 	}
+	.main-menu .navigation > li:first-child {
+		margin-left: 0px;
+	}
+
 }
 
 @media only screen and (max-width: 1499px){
+	.main-menu .navigation > li:first-child {
+		margin-left: 0px;
+	}
+	.progress-col {
+		margin-right: 100px;
+		margin-top: 50px;
+	}
+
+
 	.banner-eight .upper-content h2,
 	.banner-eight .lower-content h2{
 		font-size: 48px;
@@ -32,14 +45,90 @@
 	}
 }
 
+@media (max-width: 1200px) {
+	.wrapper {
+	  flex-direction: column;
+	  height: auto;
+	  padding: 15px;
+	}
+  
+	.wrapper .option {
+        display: flex;
+        margin: 10px 0;
+        justify-content: center;
+	}
+  
+	.wrapper .option span {
+	  font-size: 18px;
+	}
+  }
+  
+  @media (max-width: 768px) {
+	.wrapper {
+	  padding: 10px;
+	}
+  
+	.wrapper .option {
+		display: flex;
+		justify-content: center;
+	  padding: 5px;
+	}
+  
+	.wrapper .option span {
+	  font-size: 16px;
+	  display: flex;
+	  justify-content: center;
+	}
+  
+	.wrapper .option .dot {
+	  height: 18px;
+	  width: 18px;
+	  margin-right: 10px;
+	}
+  
+	.wrapper .option .dot::before {
+	  width: 10px;
+	  height: 10px;
+	}
+  }
+  
+  @media (max-width: 480px) {
+	.wrapper {
+	  padding: 5px;
+	}
+  
+	.wrapper .option {
+	  margin: 5px 0;
+	  padding: 5px;
+	}
+  
+	.wrapper .option span {
+	  font-size: 14px;
+	}
+  
+	.wrapper .option .dot {
+	  height: 16px;
+	  width: 16px;
+	}
+  
+	.wrapper .option .dot::before {
+	  width: 8px;
+	  height: 8px;
+	}
+  }
+
 @media only screen and (max-width: 1339px){
+
+	
+
+
 	
 	.main-header .header-upper .links-box{
 		margin-left: 20px;
 	}
 
 	.main-menu .navigation > li{
-		margin-left: 25px;
+
 	}
 
 	.intro-section .text-col .about{
@@ -2772,6 +2861,11 @@
 		opacity: 0%;
 	
     }
+	.progress-col{
+		margin-right: 0px;
+	}
+
+
 }
 
 /* Daha küçük mobil cihazlar için */

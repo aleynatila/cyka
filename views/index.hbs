@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="utf-8">
-<title>Cyka AI - Be Always a Step Ahead</title>
+<title id="title-main">Cyka AI - Be Always a Step Ahead</title>
+
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-<link rel="icon" href="images/favicon.png" type="image/x-icon">
+<link href="/css/style.css" rel="stylesheet">
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+<link rel="icon" href="/images/favicon.png" type="image/x-icon">
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -17,14 +19,13 @@
 </head>
 
 <body class="home-one">
-  <div class="page-wrapper"> 
+ <div class="page-wrapper"> 
 
     <!-- Preloader -->
     <div class="preloader"></div> 
 
     <!-- Main Header-->
-     
-        <header class="main-header header-one">
+    <header class="main-header header-one">
         <!-- Header Upper -->
         <div class="header-upper">        
             <div class="auto-container">
@@ -32,17 +33,24 @@
                 <div class="main-box clearfix">
                     <!--Logo-->
                     <div class="logo-box clearfix">
-                         <div class="logo"><a href="/" title="CykaAI"><img src="/images/logo-1.png" alt="" title="CykaAI"></a></div>
-                         <div class="lang-box">
-                            <a href="#" class="theme-btn lang-btn">EN <i class="arrow fa fa-caret-down"></i></a
-                            >
+                        <div class="logo">
+                            <a href="/" title="CykaAI">
+                                <img src="/images/logo-1.png" alt="" title="CykaAI">
+                            </a>
+                        </div>
+                        <div class="lang-box">
+                            <a href="#" class="theme-btn lang-btn" id="lang-btn">
+                                <span id="lang-btn-text">EN</span> 
+                                <i class="arrow fa fa-caret-down"></i>
+                            </a>
                             <ul class="lang-list">
-                                <li><a href="/cryplight-package/index-tr.html">Tr</a></li>
-                                <li><a href="/cryplight-package/index-es.html">Es</a></li>
-                                <li><a href="/cryplight-package/index-ru.html">Ru</a></li>
-                                <li><a href="/cryplight-package/index-de.html">De</a></li>
+                                  <li><a href="#" onclick="changeLanguage('en')"  id="lang-en">En</a></li>
+                                  <li><a href="#" onclick="changeLanguage('tr')"  id="lang-tr">Tr</a></li>
+                                  <li><a href="#" onclick="changeLanguage('es')" id="lang-es">Es</a></li>
+                                  <li><a href="#" onclick="changeLanguage('ru')" id="lang-ru">Ru</a></li>
+                                  <li><a href="#" onclick="changeLanguage('de')" id="lang-de">De</a></li>
                             </ul>
-                         </div>
+                        </div>
                     </div>
 
                     <div class="nav-box clearfix">
@@ -50,119 +58,167 @@
                         <div class="nav-outer clearfix">         
                             <nav class="main-menu">
                                 <ul class="navigation clearfix" id="scroll-nav">
-                                    <li><a href="#intro-section">What Is Cyka AI</a></li>
-                                    <li><a href="#why-token">Why Choose Cyka AI</a></li>
-                                    <li><a href="#how-it-works">How It Works</a></li>
-                                    <li><a href="#roadmap">Roadmap</a></li>
-                                    <li><a href="#documents">Documents</a></li>
-                                    <li><a href="#contact-section">Contact</a></li>
+                                    <li><a href="#intro-section" id="nav-intro">What Is Cyka AI</a></li>
+                                  <!--  <li><a href="#why-token" id="nav-why-token">Why Choose Cyka AI</a></li>-->
+                                    <li><a href="#how-it-works" id="nav-how-it-works">How It Works</a></li>
+                                    <li><a href="#roadmap" id="nav-roadmap">Roadmap</a></li>
+                                    <li><a href="#documents" id="nav-documents">Documents</a></li>
+                                    <li><a href="#contact-section" id="nav-contact">Contact</a></li>
                                 </ul>
                             </nav>
                             <!-- Main Menu End-->
                         </div>
                         <!--Nav Outer End-->
-   {{#if user}}
+                        
+                        {{#if user}}
                         <div class="links-box clearfix">
-                            <p class="welcome_text">Hello, {{user.name}}!</p>
-                            <div class="link"><a href="/auth/logout" class="theme-btn btn-style-two"><span class="txt">Logout</span></a></div>
+                             <div class="link">
+                                <a href="/auth/dashboard" class="theme-btn btn-style-two">
+                                    <span class="txt" id="user-greeting">Hello,</span>
+                                    <span class="txt">{{user.name}}</span>
+
+                                </a>
+                            </div>
+                            <div class="link">
+                                <a href="/auth/logout" class="theme-btn btn-style-two">
+                                    <span class="txt" id="logout-btn">Logout</span>
+                                </a>
+                            </div>
                         </div>
-   {{else}}
-      <div class="links-box clearfix">
-                            <div class="link"><a href="/register" class="theme-btn btn-style-one" style="
-    padding-left: 25px;
-"><span class="txt">Sign up</span></a></div>
-                            <div class="link"><a href="/login" class="theme-btn btn-style-two"><span class="txt">Login</span></a></div>
+                        {{else}}
+                        <div class="links-box clearfix">
+                            <div class="link">
+                                <a href="/register" class="theme-btn btn-style-one" style="padding-left: 25px;">
+                                    <span class="txt" id="signup-btn">Sign up</span>
+                                </a>
+                            </div>
+                            <div class="link">
+                                <a href="/login" class="theme-btn btn-style-two">
+                                    <span class="txt" id="login-btn">Login</span>
+                                </a>
+                            </div>
                         </div>
-   {{/if}}
+                        {{/if}}
 
                         <!-- Hidden Nav Toggler -->
                         <div class="nav-toggler">
-                            <button class="hidden-bar-opener"><span class="icon"><i class="fa-regular fa-bars"></i></span></button>
+                            <button class="hidden-bar-opener">
+                                <span class="icon">
+                                    <i class="fa-regular fa-bars" id="nav-toggler-icon"></i>
+                                </span>
+                            </button>
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </div>
     </header>
-                            
-                     
-        
     
-    <!--End Main Header -->
-
-    
-    <!--Menu Backdrop-->
+    <!-- Menu Backdrop -->
     <div class="menu-backdrop"></div>
 
     <!-- Hidden Navigation Bar -->
     <section class="hidden-bar">
         <!-- Hidden Bar Wrapper -->
         <div class="hidden-bar-wrapper">
-            <div class="hidden-bar-closer"><span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14"><path d="M15 0L1 14m14 0L1 0" stroke="#101010" fill="none" fill-rule="evenodd"></path></svg></span></div>
+            <div class="hidden-bar-closer">
+                <span class="icon">
+                    <svg class="icon-close" role="presentation" viewBox="0 0 16 14">
+                        <path d="M15 0L1 14m14 0L1 0" stroke="#101010" fill="none" fill-rule="evenodd"></path>
+                    </svg>
+                </span>
+            </div>
             <div class="nav-logo-box">
-                <div class="logo"><a href="/" title="CykaAI"><img src="/images/logo-1.png" alt="" title="CykaAI"></a></div>
+                <div class="logo">
+                    <a href="/" title="CykaAI">
+                        <img src="/images/logo-1.png" alt="" title="CykaAI">
+                    </a>
+                </div>
             </div>
             <!-- .Side-menu -->
             <div class="side-menu">
-                 <ul class="navigation custom-links clearfix" id="scroll-nav-2">
-                    <li><a href="#intro-section">What Is Cyka AI</a></li>
-                    <li><a href="#why-token">Why Choose Cyka AI</a></li>
-                    <li><a href="#how-it-works">How It Works</a></li>
-                    <li><a href="#roadmap">Roadmap</a></li>
-                    <li><a href="#documents">Documents</a></li>
-                    <li><a href="#contact-section">Contact</a></li>
+                <ul class="navigation custom-links clearfix" id="scroll-nav-2">
+                    <li style="margin-left: 0px;"><a href="#intro-section" id="nav-intro" class="__mPS2id _mPS2id-h">What Is Cyka AI</a></li>
+                   <!-- <li><a href="#why-token" id="side-nav-why-token">Why Choose Cyka AI</a></li>-->
+                    <li><a href="#how-it-works" id="side-nav-how-it-works">How It Works</a></li>
+                    <li><a href="#roadmap" id="side-nav-roadmap">Roadmap</a></li>
+                    <li><a href="#documents" id="side-nav-documents">Documents</a></li>
+                    <li><a href="#contact-section" id="side-nav-contact">Contact</a></li>
                 </ul>
             </div><!-- /.Side-menu -->
             
             <div class="links-box clearfix">
                 <div class="clearfix">
-                    <div class="link"><a href="/register" class="theme-btn btn-style-one"><span class="txt">Sign up</span></a></div>
-                    <div class="link"><a href="/login" class="theme-btn btn-style-two"><span class="txt">Login</span></a></div>
+                    <div class="link">
+                        <a href="/register" class="theme-btn btn-style-one">
+                            <span class="txt" id="side-signup-btn">Sign up</span>
+                        </a>
+                    </div>
+                    <div class="link">
+                        <a href="/login" class="theme-btn btn-style-two">
+                            <span class="txt" id="side-login-btn">Login</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-        
         </div><!-- / Hidden Bar Wrapper -->
     </section>
     
     <!-- / Hidden Bar -->
 
-
-   <!-- Banner Section -->
-   <section class="banner-section banner-two">
-    <div class="curve-layer" style="background-image: url('images/background/banner-bg-2-2.png');"></div>
-   <!-- <div class="banner-container" style="background-image: url('images/header-1-1.png');">-->
+    <!-- Banner Section -->
+    <section class="banner-section banner-two">
+        <div class="curve-layer" style="background-image: url('images/background/banner-bg-2-2.png');"></div>
         <div class="auto-container">
             <div class="content-box">
                 <div class="row clearfix">
-                    <!--Text Column-->
+                    <!-- Text Column -->
                     <div class="text-col col-lg-6 col-md-12 col-sm-12">
                         <img class="banner_ai" id="banner_ai" src="/cryplight-package/images/header-1-1.png">
                         <div class="inner">
-                            <h1 style="color: white;">Transform your ideas into reality with our AI-powered tools.</h1>
-                            <div style="color: white;" class="text">CYKA AI is an artificial intelligence application that responds to the needs of you and your company.</div>
-                          
+                            <h1 id="banner-heading" style="color: white;">Transform your ideas into reality with our AI-powered tools.</h1>
+                            <div id="banner-text" style="color: white;">CYKA AI is an artificial intelligence application that responds to the needs of you and your company.</div>
                         </div>
                     </div>
-                    <!--Counter Column-->
+                    <!-- Counter Column -->
                     <div class="counter-col col-lg-6 col-md-12 col-sm-12">
                         <div class="inner">
                             <div class="inner-box">
-                                <h5>WE WILL BE READY IN</h5>
+                                <h5 id="counter-heading">WE WILL BE READY IN</h5>
                                 <div class="time-counter">
-                                    <!-- Time  -->
-                                    <div class="time-countdown-two clearfix" data-countdown="2024/07/15"></div>
+                                    <!-- Time -->
+                                    <div class="time-countdown-two clearfix" data-countdown="2024/10/06"></div>
                                 </div>
-                                <div class="link-box"><a href="#" class="theme-btn btn-style-three"><span class="txt">Get Started Now</span></a></div>
+                                <div class="link-box">
+                                    <a href="/payment" class="theme-btn btn-style-three">
+                                        <span class="txt" id="get-started-btn">Get Started Now</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Progress Column -->
+                    <div class="progress-col col-lg-4 col-md-12 col-sm-12 ml-auto">
+                        <div class="inner">
+                            <h5 id="progress-heading">Pre Sale</h5>
+                            <div class="progress-box">
+                                <div class="bar-outer">
+                                    <div class="bar-inner">
+                                        <div class="bar" style="width: 70%;"></div>
+                                    </div>
+                                    <div class="pt pt-one"><span id="pre-sale">Pre Sale</span></div>
+                                    <div class="pt pt-two"><span id="soft-cap">Soft Cap</span></div>
+                                    <div class="pt pt-three"><span id="bonus">Bonus</span></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+
 <!--End Banner Section -->
 
 
@@ -170,556 +226,805 @@
     <br>
     <br>
     <!--Intro Section-->
-    <section class="intro-section" id="intro-section">
-        <div class="auto-container">
-            <div class="row clearfix">
-                <!--Text Column-->
-                <div class="text-col col-lg-6 col-md-12 col-sm-12">
-                    <div class="inner">
-                        <div class="title-box">
-                            <h6 class="subtitle"><span>WHAT IS CYKA AI</span></h6>
-                            <h2>We’ve built a platform to revolutionize your creative process.</h2>
-                        </div>
-                        <div class="about">
-                            <div class="info-block">
-                                <div class="inner-box">
-                                    <div class="icon-box"><span class="icon fa fa-users"></span></div>
-                                    <h5>Instant Article Creation</h5>
-                                    <div class="text">Create article content in seconds with CYKA AI and always be one step ahead.</div>
-                                </div>
-                            </div>
-                            <div class="info-block">
-                                <div class="inner-box">
-                                    <div class="icon-box"><span class="icon fa fa-globe"></span></div>
-                                    <h5>Multilingual Writing</h5>
-                                    <div class="text">Let CYKA AI write for you in more than 38 languages, including English, Spanish, and French.</div>
-                                </div>
-                            </div>
-                            <div class="info-block">
-                                <div class="inner-box">
-                                    <div class="icon-box"><span class="icon fa fa-star"></span></div>
-                                    <h5>3D Avatar Creation</h5>
-                                    <div class="text">Immortalize your and your loved ones' memories by creating a 3D avatar.</div>
-                                </div>
-                            </div>
-                        </div>
+   <section class="intro-section" id="intro-section">
+    <div class="auto-container">
+        <div class="row clearfix">
+            <!-- Text Column -->
+            <div class="text-col col-lg-6 col-md-12 col-sm-12">
+                <div class="inner">
+                    <div class="title-box">
+                        <h6 class="subtitle" id="intro-subtitle">
+                            <span id="intro-subtitle-text">WHAT IS CYKA AI</span>
+                        </h6>
+                        <h2 id="intro-heading">We’ve built a platform to revolutionize your creative process.</h2>
                     </div>
-                </div>
-                <!--Image Column-->
-                <div class="image-col col-lg-6 col-md-12 col-sm-12">
-                    <div class="inner">
-                        <div class="image">
-                            <img src="images/resource/globe-1.jpg" alt="">
+                    <div class="about">
+                        <div class="info-block">
+                            <div class="inner-box">
+                                <div class="icon-box"><span class="icon fa fa-users"></span></div>
+                                <h5 id="info-instant-creation">Instant Article Creation</h5>
+                                <div class="text" id="info-instant-creation-text">Create article content in seconds with CYKA AI and always be one step ahead.</div>
+                            </div>
+                        </div>
+                        <div class="info-block">
+                            <div class="inner-box">
+                                <div class="icon-box"><span class="icon fa fa-globe"></span></div>
+                                <h5 id="info-multilingual-writing">Multilingual Writing</h5>
+                                <div class="text" id="info-multilingual-writing-text">Let CYKA AI write for you in more than 38 languages, including English, Spanish, and French.</div>
+                            </div>
+                        </div>
+                        <div class="info-block">
+                            <div class="inner-box">
+                                <div class="icon-box"><span class="icon fa fa-star"></span></div>
+                                <h5 id="info-3d-avatar">3D Avatar Creation</h5>
+                                <div class="text" id="info-3d-avatar-text">Immortalize your and your loved ones' memories by creating a 3D avatar.</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Image Column -->
+            <div class="image-col col-lg-6 col-md-12 col-sm-12">
+                <div class="inner">
+                    <div class="image">
+                        <img src="images/resource/globe-1.jpg" alt="" id="intro-image">
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
+
     
 
     <!--Why Section-->
-    <section class="why-section" id="why-token">
-        <div class="auto-container">
-            <div class="title-box">
-                <h6 class="subtitle"><span>Why choose CYKA AI</span></h6>
+    <!--
+  <section class="why-section" id="why-token">
+    <div class="auto-container">
+        <div class="title-box">
+            <h6 id="why-choose" class="subtitle"><span>Why choose CYKA AI</span></h6>
+        </div>
+        <div class="row clearfix">
+       
+            <div class="why-block col-xl-3 col-lg-6 col-md-6 col-sm-12" id="instant-article-creation">
+                <div class="inner-box">
+                    <div class="icon-box"><span class="icon"><img src="/images/resource/icon-1.svg" alt="Instant Article Creation"></span></div>
+                    <h4 id="instant-article-creation-title">Instant Article Creation</h4>
+                    <div class="text" id="instant-article-creation-text">Create article content in seconds with CYKA AI and always be one step ahead.</div>
+                </div>
             </div>
-            <div class="row clearfix">
-                <!--Why Block-->
-                <div class="why-block col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="icon-box"><span class="icon"><img src="images/resource/icon-1.svg" alt=""></span></div>
-                        <h4>Instant Article Creation</h4>
-                        <div class="text">Create article content in seconds with CYKA AI and always be one step ahead.</div>
-                    </div>
+           
+            <div class="why-block col-xl-3 col-lg-6 col-md-6 col-sm-12" id="no-transaction-fee">
+                <div class="inner-box">
+                    <div class="icon-box"><span class="icon"><img src="/images/resource/icon-2.svg" alt="No Transaction Fee"></span></div>
+                    <h4 id="no-transaction-fee-title">No Transaction Fee</h4>
+                    <div class="text" id="no-transaction-fee-text">You can buy tokens without paying any transaction fee.</div>
                 </div>
-                <!--Why Block-->
-                <div class="why-block col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="icon-box"><span class="icon"><img src="images/resource/icon-2.svg" alt=""></span></div>
-                        <h4>No Transaction Fee</h4>
-                        <div class="text">You can buy tokens without paying any transaction fee.</div>
-                    </div>
+            </div>
+     
+            <div class="why-block col-xl-3 col-lg-6 col-md-6 col-sm-12" id="multilingual-writing">
+                <div class="inner-box">
+                    <div class="icon-box"><span class="icon"><img src="/images/resource/icon-3.svg" alt="Multilingual Writing"></span></div>
+                    <h4 id="multilingual-writing-title">Multilingual Writing</h4>
+                    <div class="text" id="multilingual-writing-text-why">Let CYKA AI write for you in more than 38 languages, including English, Spanish, and French.</div>
                 </div>
-                <!--Why Block-->
-                <div class="why-block col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="icon-box"><span class="icon"><img src="images/resource/icon-3.svg" alt=""></span></div>
-                        <h4>Multilingual Writing</h4>
-                        <div class="text">Let CYKA AI write for you in more than 38 languages, including English, Spanish, and French.</div>
-                    </div>
-                </div>
-                <!--Why Block-->
-                <div class="why-block col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="icon-box"><span class="icon"><img src="images/resource/icon-4.svg" alt=""></span></div>
-                        <h4>Image Generation</h4>
-                        <div class="text">Generate images in a variety of styles - from photorealism to classic anime - all via a simple text command.</div>
-                    </div>
+            </div>
+     
+            <div class="why-block col-xl-3 col-lg-6 col-md-6 col-sm-12" id="image-generation">
+                <div class="inner-box">
+                    <div class="icon-box"><span class="icon"><img src="/images/resource/icon-4.svg" alt="Image Generation"></span></div>
+                    <h4 id="image-generation-title">Image Generation</h4>
+                    <div class="text" id="image-generation-text-why">Generate images in a variety of styles - from photorealism to classic anime - all via a simple text command.</div>
                 </div>
             </div>
         </div>
-    </section>
-    
+    </div>
+</section>
+    -->
 
-    <!--How It Works-->
-    <section class="how-it-works" id="how-it-works">
-        <div class="bg-layer-right" style="background-image: url('images/background/how-pattern-1.png');"></div>
-        <div class="bg-layer-center" style="background-image: url('images/background/how-pattern-2.png');"></div>
-        <div class="bg-layer-two"></div>
-        <div class="auto-container">
-            <div class="title-box centered">
-                <h6 class="subtitle"><span>How it works</span></h6>
-                <h2>Revolutionize Your Creative Process with CYKA AI.</h2>
-            </div>
-    
-            <div class="carousel-box">
-                <div class="pagers-box">
-                    <div class="pager-one clearfix">
-                        <a href="" class="pager-item" data-slide-index="0"><div class="icon-box"><i class="fa-solid fa-cloud-snow"></i></div></a>
-                        <a href="" class="pager-item" data-slide-index="1"><div class="icon-box"><i class="fa-solid fa-cubes"></i></div></a>
-                        <a href="" class="pager-item" data-slide-index="2"><div class="icon-box"><i class="fa-solid fa-circle-dot"></i></div></a>
-                        <a href="" class="pager-item" data-slide-index="3"><div class="icon-box"><i class="fa-solid fa-shield-check"></i></div></a>
-                        <a href="" class="pager-item" data-slide-index="4"><div class="icon-box"><i class="fa-solid fa-coins"></i></div></a>
-                        <a href="" class="pager-item" data-slide-index="5"><div class="icon-box"><i class="fa-solid fa-file-alt"></i></div></a>
-                        
-                    </div>
+<!-- How It Works -->
+<section class="how-it-works" id="how-it-works">
+    <div class="bg-layer-right" style="background-image: url('images/background/how-pattern-1.png');"></div>
+    <div class="bg-layer-center" style="background-image: url('images/background/how-pattern-2.png');"></div>
+    <div class="bg-layer-two"></div>
+    <div class="auto-container">
+        <div class="title-box centered">
+            <h6 class="subtitle" id="how-it-works-subtitle"><span id="how-it-works-subtitle-text">How it works</span></h6>
+            <h2 id="how-it-works-heading">Revolutionize Your Creative Process with CYKA AI.</h2>
+        </div>
+
+        <div class="carousel-box">
+            <div class="pagers-box">
+                <div class="pager-one clearfix">
+                    <a href="" class="pager-item" data-slide-index="0"><div class="icon-box" id="pager-icon-0"><i class="fa-solid fa-cloud-snow"></i></div></a>
+                    <a href="" class="pager-item" data-slide-index="1"><div class="icon-box" id="pager-icon-1"><i class="fa-solid fa-cubes"></i></div></a>
+                    <a href="" class="pager-item" data-slide-index="2"><div class="icon-box" id="pager-icon-2"><i class="fa-solid fa-circle-dot"></i></div></a>
+                    <a href="" class="pager-item" data-slide-index="3"><div class="icon-box" id="pager-icon-3"><i class="fa-solid fa-shield-check"></i></div></a>
+                    <a href="" class="pager-item" data-slide-index="4"><div class="icon-box" id="pager-icon-4"><i class="fa-solid fa-coins"></i></div></a>
+                    <a href="" class="pager-item" data-slide-index="5"><div class="icon-box" id="pager-icon-5"><i class="fa-solid fa-file-alt"></i></div></a>
                 </div>
-                <div class="slider-box">
-                    <div class="how-work-carousel" id="how-work-carousel">
-                        <div class="slide">
-                            <div class="inner-box">
-                                <h5>Instant Article Creation</h5>
-                                <div class="text">Create article content in seconds with CYKA AI and always be one step ahead.</div>
-                            </div>
+            </div>
+            <div class="slider-box">
+                <div class="how-work-carousel" id="how-work-carousel">
+                    <div class="slide" id="slide-0">
+                        <div class="inner-box">
+                            <h5 id="slide-0-heading">Instant Article Creation</h5>
+                            <div class="text" id="slide-0-text">Create article content in seconds with CYKA AI and always be one step ahead.</div>
                         </div>
-                        <div class="slide">
-                            <div class="inner-box">
-                                <h5>3D Avatar Creation</h5>
-                                <div class="text">Immortalize your and your loved ones' memories by creating a 3D avatar.</div>
-                            </div>
+                    </div>
+                    <div class="slide" id="slide-1">
+                        <div class="inner-box">
+                            <h5 id="slide-1-heading">3D Avatar Creation</h5>
+                            <div class="text" id="slide-1-text">Immortalize your and your loved ones' memories by creating a 3D avatar.</div>
                         </div>
-                        <div class="slide">
-                            <div class="inner-box">
-                                <h5>Multilingual Writing</h5>
-                                <div class="text">Let CYKA AI write for you in more than 38 languages, including English, Spanish, and French.</div>
-                            </div>
+                    </div>
+                    <div class="slide" id="slide-2">
+                        <div class="inner-box">
+                            <h5 id="slide-2-heading">Multilingual Writing</h5>
+                            <div class="text" id="slide-2-text">Let CYKA AI write for you in more than 38 languages, including English, Spanish, and French.</div>
                         </div>
-                        <div class="slide">
-                            <div class="inner-box">
-                                <h5>Image Generation</h5>
-                                <div class="text">Generate images in a variety of styles - from photorealism to classic anime - all via a simple text command.</div>
-                            </div>
+                    </div>
+                    <div class="slide" id="slide-3">
+                        <div class="inner-box">
+                            <h5 id="slide-3-heading">Image Generation</h5>
+                            <div class="text" id="slide-3-text">Generate images in a variety of styles - from photorealism to classic anime - all via a simple text command.</div>
                         </div>
-                        <div class="slide">
-                            <div class="inner-box">
-                                <h5>Photo Editing</h5>
-                                <div class="text">Delete unwanted elements from your photos in seconds and edit them as you wish.</div>
-                            </div>
+                    </div>
+                    <div class="slide" id="slide-4">
+                        <div class="inner-box">
+                            <h5 id="slide-4-heading">Photo Editing</h5>
+                            <div class="text" id="slide-4-text">Delete unwanted elements from your photos in seconds and edit them as you wish.</div>
                         </div>
-                        <div class="slide">
-                            <div class="inner-box">
-                                <h5>Business Intelligence</h5>
-                                <div class="text">Transform complex systems into Adaptive Systems (CAS) Machine Learning Models that Think, Develop, Adapt and Grow with Adaptive AI tools.</div>
-                            </div>
-                        </div>
-                    
+                    </div>
+                    <div class="slide" id="slide-5">
+                        <div class="inner-box">
+                            <h5 id="slide-5-heading">Business Intelligence</h5>
+                            <div class="text" id="slide-5-text">Transform complex systems into Adaptive Systems (CAS) Machine Learning Models that Think, Develop, Adapt and Grow with Adaptive AI tools.</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+
+ <!-- Allocation Section -->
+<section class="allocation-section">
+
+    <div class="bg-circles"><img src="/images/resource/circles.png" alt=""></div>
+    <div class="pattern-layer"><img src="/images/resource/allo-pattern.png" alt=""></div>
+
+    <div class="auto-container">
+        <div class="price-box clearfix">
+            <div class="price"><span id="price-text">1 CkAI = 0.50 $</span></div>
+            <div class="link-box"><a href="/payment" class="theme-btn btn-style-one" id="buy-now-button"><span class="txt">Buy now</span></a></div>
+        </div>
+        <div class="tabs-box">
+            <div class="tab-buttons">
+                <ul class="clearfix">
+                    <li class="tab-btn active-btn" data-tab="#tab-1" id="tab-btn-1"><span id="tab-btn-1-text">Token Distribution</span></li>
+                </ul>
+            </div>
+            <div class="tabs-content">
+                <!-- Tab -->
+                <div class="tab active-tab" id="tab-1">
+                    <div class="inner">
+                        <div class="row clearfix">
+                            <!-- Image Col -->
+                            <div class="image-col col-lg-6 col-md-6 col-sm-12">
+                                <div class="inner">
+                                    <div class="image"><img src="/images/graph.png" alt=""></div>
+                                </div>
+                            </div>
+                            <!-- Text Col -->
+                            <div class="text-col col-lg-6 col-md-6 col-sm-12" style="margin-top:50px;">
+                                <div class="inner">
+                                    <div class="progress-box">
+                                        <div class="bar-block">
+                                            <div class="bar-legend" id="bar-legend-community">Community: 40%</div>
+                                            <div class="prog-bar color-1">
+                                                <div class="bar-inner" style="width: 40%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="bar-block">
+                                            <div class="bar-legend" id="bar-legend-partnership">Partnership: 20%</div>
+                                            <div class="prog-bar color-2">
+                                                <div class="bar-inner" style="width: 20%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="bar-block">
+                                            <div class="bar-legend" id="bar-legend-marketing">Marketing: 15%</div>
+                                            <div class="prog-bar color-3">
+                                                <div class="bar-inner" style="width: 15%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="bar-block">
+                                            <div class="bar-legend" id="bar-legend-team">Team: 10%</div>
+                                            <div class="prog-bar color-4">
+                                                <div class="bar-inner" style="width: 10%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="bar-block">
+                                            <div class="bar-legend" id="bar-legend-presale">Presale: 15%</div>
+                                            <div class="prog-bar color-5">
+                                                <div class="bar-inner" style="width: 15%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <!--discover Section-->
-    <section class="token-sale" id="token-sale">
-        <div class="bg-circles"><img src="images/resource/circles-2.png" alt=""></div>
-        <div class="auto-container">
-            <div class="title-box">
-                <h6 class="subtitle"><span>Discover CYKA AI</span></h6>
-                <h2>Revolutionize Your Creative Process with CYKA AI.</h2>
-            </div>
-            <div class="row clearfix">
-                <!--Feature Block-->
-                <div class="sale-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <h4>Instant Article Creation</h4>
-                        <div class="text">Create article content in seconds with CYKA AI and always be one step ahead.</div>
-                    </div>
-                </div>
-                <!--Feature Block-->
-                <div class="sale-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <h4>3D Avatar Creation</h4>
-                        <div class="text">Immortalize your and your loved ones' memories by creating a 3D avatar.</div>
-                    </div>
-                </div>
-                <!--Feature Block-->
-                <div class="sale-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <h4>Multilingual Writing</h4>
-                        <div class="text">Let CYKA AI write for you in more than 38 languages, including English, Spanish, and French.</div>
-                    </div>
-                </div>
-                <!--Feature Block-->
-                <div class="sale-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <h4>Image Generation</h4>
-                        <div class="text">Generate images in a variety of styles - from photorealism to classic anime - all via a simple text command.</div>
-                    </div>
-                </div>
-                <!--Feature Block-->
-                <div class="sale-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <h4>Photo Editing</h4>
-                        <div class="text">Delete unwanted elements from your photos in seconds and edit them as you wish.</div>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="calendar-view">
-                <div class="carousel-box">
-                    <div class="token-sale-carousel owl-theme owl-carousel">
-                        <!--Feature Block-->
-                        <div class="sale-block-two">
-                            <div class="inner-box">
-                                <div class="date">Instant Creation</div>
-                                <div class="bonus">Create article content in seconds</div>
-                                <div class="price">Be always a step ahead</div>
-                            </div>
-                        </div>
-                        <!--Feature Block-->
-                        <div class="sale-block-two">
-                            <div class="inner-box">
-                                <div class="date">Immortal Memories</div>
-                                <div class="bonus">Create a 3D avatar</div>
-                                <div class="price">Immortalize memories</div>
-                            </div>
-                        </div>
-                        <!--Feature Block-->
-                        <div class="sale-block-two">
-                            <div class="inner-box">
-                                <div class="date">Write in 38+ Languages</div>
-                                <div class="bonus">Multilingual writing</div>
-                                <div class="price">Including English, Spanish, and French</div>
-                            </div>
-                        </div>
-                        <!--Feature Block-->
-                        <div class="sale-block-two">
-                            <div class="inner-box">
-                                <div class="date">Generate Images</div>
-                                <div class="bonus">From photorealism to classic anime</div>
-                                <div class="price">Simple text command</div>
-                            </div>
-                        </div>
-                        <!--Feature Block-->
-                        <div class="sale-block-two">
-                            <div class="inner-box">
-                                <div class="date">Edit Photos</div>
-                                <div class="bonus">Delete unwanted elements</div>
-                                <div class="price">Edit as you wish</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    
+<section class="token-sale" id="token-sale">
+    <div class="bg-circles"><img src="images/resource/circles-2.png" alt=""></div>
+    <div class="auto-container">
+        <div class="title-box">
+            <h6 class="subtitle"><span id="discover-cyka-ai">Discover CYKA AI</span></h6>
+            <h2 id="revolutionize-process">Revolutionize Your Creative Process with CYKA AI.</h2>
         </div>
-    </section>
-    
+        <div class="row clearfix">
+            <!-- Feature Block -->
+            <div class="sale-block col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box">
+                    <h4 id="instant-article-creation">Instant Article Creation</h4>
+                    <div class="text" id="instant-article-text">Create article content in seconds with CYKA AI and always be one step ahead.</div>
+                </div>
+            </div>
+            <!-- Feature Block -->
+            <div class="sale-block col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box">
+                    <h4 id="3d-avatar-creation">3D Avatar Creation</h4>
+                    <div class="text" id="3d-avatar-text">Immortalize your and your loved ones' memories by creating a 3D avatar.</div>
+                </div>
+            </div>
+            <!-- Feature Block -->
+            <div class="sale-block col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box">
+                    <h4 id="multilingual-writing">Multilingual Writing</h4>
+                    <div class="text" id="multilingual-writing-text">Let CYKA AI write for you in more than 38 languages, including English, Spanish, and French.</div>
+                </div>
+            </div>
+            <!-- Feature Block -->
+            <div class="sale-block col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box">
+                    <h4 id="image-generation">Image Generation</h4>
+                    <div class="text" id="image-generation-text">Generate images in a variety of styles - from photorealism to classic anime - all via a simple text command.</div>
+                </div>
+            </div>
+            <!-- Feature Block -->
+            <div class="sale-block col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box">
+                    <h4 id="photo-editing">Photo Editing</h4>
+                    <div class="text" id="photo-editing-text">Delete unwanted elements from your photos in seconds and edit them as you wish.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="calendar-view">
+            <div class="carousel-box">
+                <div class="token-sale-carousel owl-theme owl-carousel">
+                    <!-- Feature Block -->
+                    <div class="sale-block-two">
+                        <div class="inner-box">
+                            <div class="date" id="instant-creation-date">Instant Creation</div>
+                            <div class="bonus" id="instant-creation-bonus">Create article content in seconds</div>
+                            <div class="price" id="instant-creation-price">Be always a step ahead</div>
+                        </div>
+                    </div>
+                    <!-- Feature Block -->
+                    <div class="sale-block-two">
+                        <div class="inner-box">
+                            <div class="date" id="immortal-memories-date">Immortal Memories</div>
+                            <div class="bonus" id="immortal-memories-bonus">Create a 3D avatar</div>
+                            <div class="price" id="immortal-memories-price">Immortalize memories</div>
+                        </div>
+                    </div>
+                    <!-- Feature Block -->
+                    <div class="sale-block-two">
+                        <div class="inner-box">
+                            <div class="date" id="write-in-38-languages-date">Write in 38+ Languages</div>
+                            <div class="bonus" id="write-in-38-languages-bonus">Multilingual writing</div>
+                            <div class="price" id="write-in-38-languages-price">Including English, Spanish, and French</div>
+                        </div>
+                    </div>
+                    <!-- Feature Block -->
+                    <div class="sale-block-two">
+                        <div class="inner-box">
+                            <div class="date" id="generate-images-date">Generate Images</div>
+                            <div class="bonus" id="generate-images-bonus">From photorealism to classic anime</div>
+                            <div class="price" id="generate-images-price">Simple text command</div>
+                        </div>
+                    </div>
+                    <!-- Feature Block -->
+                    <div class="sale-block-two">
+                        <div class="inner-box">
+                            <div class="date" id="edit-photos-date">Edit Photos</div>
+                            <div class="bonus" id="edit-photos-bonus">Delete unwanted elements</div>
+                            <div class="price" id="edit-photos-price">Edit as you wish</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 
     <!--Roadmap Section-->
-    <section class="roadmap-section" id="roadmap">
-        <div class="bg-layer-left" style="background-image: url('images/background/pattern-1.png');"></div>
-        <div class="auto-container">
-            <div class="title-box centered">
-                <h6 class="subtitle"><span>Roadmap</span></h6>
-                <h2>Our Strategy & Project Plan for CYKA AI</h2>
+   <section class="roadmap-section" id="roadmap">
+    <div class="bg-layer-left" style="background-image: url('images/background/pattern-1.png');"></div>
+    <div class="auto-container">
+        <div class="title-box centered">
+            <h6 class="subtitle"><span id="roadmap-title">Roadmap</span></h6>
+            <h2 id="strategy-project-plan">Our Strategy & Project Plan for CYKA AI</h2>
+        </div>
+
+        <div class="roadmap-box">
+            <div class="image-layer" style="background-image: url('images/background/roadmap-pattern-1.png');"></div>
+
+            <div class="first-row items-row">
+                <div class="row clearfix justify-content-center">
+                    <!-- Roadmap Block -->
+                    <div class="roadmap-block col-lg-4 col-md-4 col-sm-12">
+                        <div class="inner-box checked">
+                            <div class="date" id="2024-q2-date"><span>2024 Q2</span></div>
+                            <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+                            <div class="lower-box">
+                                <h5 id="concept-development">Concept Development</h5>
+                                <div class="text" id="concept-development-text">- Concept Generation and Identificial of Team Task</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Roadmap Block -->
+                    <div class="roadmap-block col-lg-4 col-md-4 col-sm-12">
+                        <div class="inner-box checked">
+                            <div class="date" id="2024-q3-date"><span>2024 Q3</span></div>
+                            <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+                            <div class="lower-box">
+                                <h5 id="token-launch">Token Launch</h5>
+                                <div class="text" id="token-launch-text"> - Backend Preparation for Token Launch<br>- Launching Token Offering Phase </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Roadmap Block -->
+                    <div class="roadmap-block col-lg-4 col-md-4 col-sm-12">
+                        <div class="inner-box">
+                            <div class="date" id="2025-q1-date"><span>2025 Q1</span></div>
+                            <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+                            <div class="lower-box">
+                                <h5 id="marketing-strategies">Marketing Strategies</h5>
+                                <div class="text" id="marketing-strategies-text">- Marketing and Partner Strategies<br>- 2 major exchange listings</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-    
-            <div class="roadmap-box">
-                <div class="image-layer" style="background-image: url('images/background/roadmap-pattern-1.png');"></div>
-    
-                <div class="first-row items-row">
-                    <div class="row clearfix justify-content-center">
-                        <!--Roadmap Block-->
-                        <div class="roadmap-block col-lg-4 col-md-4 col-sm-12">
-                            <div class="inner-box checked">
-                                <div class="date"><span>2024 Q3</span></div>
-                                <div class="check-icon"><i class="fa-solid fa-check"></i></div>
-                                <div class="lower-box">
-                                    <h5>Concept Development</h5>
-                                    <div class="text">- Concept Generation and Identificial of Team Task</div>
-                                </div>
+            <div class="mid-row items-row">
+                <div class="row clearfix justify-content-center">
+                    <!-- Roadmap Block -->
+                    <div class="roadmap-block col-lg-4 col-md-4 col-sm-12">
+                        <div class="inner-box">
+                            <div class="date" id="2025-q2-date"><span>2025 Q2</span></div>
+                            <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+                            <div class="lower-box">
+                                <h5 id="partnership-advertising">Partnership & Advertising</h5>
+                                <div class="text" id="partnership-advertising-text">- Partnership for Cyka AI<br>- Advertising Works</div>
                             </div>
                         </div>
-                        <!--Roadmap Block-->
-                        <div class="roadmap-block col-lg-4 col-md-4 col-sm-12">
-                            <div class="inner-box checked">
-                                <div class="date"><span>2024 Q4</span></div>
-                                <div class="check-icon"><i class="fa-solid fa-check"></i></div>
-                                <div class="lower-box">
-                                    <h5>Token Launch</h5>
-                                    <div class="text"> - Backend Preparation for Token Lounch
-                                        <br>- Launching Token Offering Phase </div>
-                                </div>
+                    </div>
+                    <!-- Roadmap Block -->
+                    <div class="roadmap-block col-lg-4 col-md-4 col-sm-12">
+                        <div class="inner-box">
+                            <div class="date" id="2025-q3-date"><span>2025 Q3</span></div>
+                            <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+                            <div class="lower-box">
+                                <h5 id="app-promotion">App Promotion</h5>
+                                <div class="text" id="app-promotion-text">- Mobile application promotion<br>- Starting to generate income from applications and services</div>
                             </div>
                         </div>
-                        <!--Roadmap Block-->
-                        <div class="roadmap-block col-lg-4 col-md-4 col-sm-12">
+                    </div>
+                    <!-- Roadmap Block -->
+                    <div class="roadmap-block col-lg-4 col-md-4 col-sm-12">
+                        <div class="inner-box">
+                            <div class="date" id="2025-q4-date"><span>2025 Q4</span></div>
+                            <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+                            <div class="lower-box">
+                                <h5 id="feature-updates-optimization">Feature Updates & Optimization</h5>
+                                <div class="text" id="feature-updates-optimization-text">- 3 major exchange listings<br>- Launching an aggressive marketing campaign in Times Square Plaza</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="last-row items-row">
+                <div class="row clearfix justify-content-center">
+                    <!-- Roadmap Block -->
+                    <div class="roadmap-block col-lg-4 col-md-4 col-sm-12">
+                        <div class="inner-box">
+                            <div class="date" id="2025-q4-date-last"><span>2025 Q4</span></div>
+                            <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+                            <div class="lower-box">
+                                <h5 id="official-launch">Official Launch</h5>
+                                <div class="text" id="official-launch-text">- Launching a token burning event from the generated revenues</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+    
+   <!-- Team Section -->
+<section class="team-two" id="team-members">
+    <div class="auto-container">
+        <div class="title-box-two centered">
+            <h2 id="team-players-title">Team Players</h2>
+            <div class="text-content" id="team-players-description">Our team player always finds effective ways to improve the product and process</div>
+        </div>
+        <div class="tabs-box">
+            <div class="tab-buttons">
+                <ul class="clearfix">
+                    <li class="tab-btn active-btn" data-tab="#team-tab-1"><span id="operating-team-tab">Operating team</span></li>
+                </ul>
+            </div>
+            <div class="tabs-content">
+                <!-- Tab -->
+                <div class="tab active-tab" id="team-tab-1">
+                    <div class="row clearfix">
+                        <!-- Team Block -->
+                        <div class="team-block-two col-xl-3 col-lg-4 col-md-6 col-sm-12">
                             <div class="inner-box">
-                                <div class="date"><span>2025 Q1</span></div>
-                                <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+                                <div class="image-box"><a href="https://x.com/oliverwilli1971?s=11"><img src="images/resource/t1.jpg" alt="" id="oliver-image"></a></div>
                                 <div class="lower-box">
-                                    <h5>Partnership & Advertising</h5>
-                                    <div class="text"> - Partnership for Cyka Al <br>- Advertising Works</div>
+                                    <h5 style="color: #010101;" id="oliver-name">Oliver WILLIAMS</h5>
+                                    <div class="designation" id="oliver-designation">CEO and Chief Scientist</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team Block -->
+                        <div class="team-block-two col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                            <div class="inner-box">
+                                <div class="image-box"><a href="https://x.com/sophieevanssss?s=11"><img src="images/resource/t2.jpg" alt="" id="sophie-image"></a></div>
+                                <div class="lower-box">
+                                    <h5 style="color: #010101;" id="sophie-name">Sophie EVANS</h5>
+                                    <div class="designation" id="sophie-designation">Co-founder</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team Block -->
+                        <div class="team-block-two col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                            <div class="inner-box">
+                                <div class="image-box"><a href="#"><img src="images/resource/t3.jpg" alt="" id="ethan-image"></a></div>
+                                <div class="lower-box">
+                                    <h5 style="color: #010101;" id="ethan-name">Ethan GARCIA</h5>
+                                    <div class="designation" id="ethan-designation">Chief Technology Officer</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team Block -->
+                        <div class="team-block-two col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                            <div class="inner-box">
+                                <div class="image-box"><a href="#"><img src="images/resource/t4.jpg" alt="" id="emily-image"></a></div>
+                                <div class="lower-box">
+                                    <h5 style="color: #010101;" id="emily-name">Emily EVANS</h5>
+                                    <div class="designation" id="emily-designation">Chief AGI Officer</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-    
-                <div class="mid-row items-row">
-                    <div class="row clearfix justify-content-center">
-                        <!--Roadmap Block-->
-                        <div class="roadmap-block col-lg-4 col-md-4 col-sm-12">
-                            <div class="inner-box">
-                                <div class="date"><span>2025 Q2</span></div>
-                                <div class="check-icon"><i class="fa-solid fa-check"></i></div>
-                                <div class="lower-box">
-                                    <h5>Marketing Strategies</h5>
-                                    <div class="text">- Marketing and Partner Strategies
-                                        <br>- 2 major exchange listings</div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Roadmap Block-->
-                        <div class="roadmap-block col-lg-4 col-md-4 col-sm-12">
-                            <div class="inner-box">
-                                <div class="date"><span>2025 Q3</span></div>
-                                <div class="check-icon"><i class="fa-solid fa-check"></i></div>
-                                <div class="lower-box">
-                                    <h5>App Promotion</h5>
-                                    <div class="text">- Mobile application promotion
-                                        <br>- Starting to generate income from applications and services</div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Roadmap Block-->
-                        <div class="roadmap-block col-lg-4 col-md-4 col-sm-12">
-                            <div class="inner-box">
-                                <div class="date"><span>2025 Q4</span></div>
-                                <div class="check-icon"><i class="fa-solid fa-check"></i></div>
-                                <div class="lower-box">
-                                    <h5>Feature Updates & Optimization</h5>
-                                    <div class="text">- 3 major exchange listings
-                                        <br>- Launching an aggressive marketing campaign in Times Square Plaza
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="last-row items-row">
-                    <div class="row clearfix justify-content-center">
-                        <!--Roadmap Block-->
-                        <div class="roadmap-block col-lg-4 col-md-4 col-sm-12">
-                            <div class="inner-box">
-                                <div class="date"><span>2025 Q4</span></div>
-                                <div class="check-icon"><i class="fa-solid fa-check"></i></div>
-                                <div class="lower-box">
-                                    <h5>Official Launch</h5>
-                                    <div class="text">-Launching a token burning event from the generated revenues                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Roadmap Block-->
-                      
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
+                <!-- Tab -->
             </div>
         </div>
-    </section>
-    
-    
+    </div>
+</section>
+
 
     <!--Documents Section-->
-    <section class="docs-section" id="documents">
-        <div class="auto-container">
-            <div class="inner-container">
-                <div class="row clearfix">
-                    <!--Text Column-->
-                    <div class="text-col col-lg-6 col-md-12 col-sm-12">
-                        <div class="inner">
-                            <div class="title-box">
-                                <h6 class="subtitle"><span>Cyka AI Whitepaper</span></h6>
-                                <h2>Explore Cyka AI Documents</h2>
-                                <div class="text-content text">Here are our documents that provide in-depth information about Cyka AI and its operations.</div>
-                            </div>
-                            <div class="lower-text">
-                                <ul class="clearfix">
-                                    <li><i class="fa-solid fa-check"></i> Cyka AI Whitepaper</li>
-                                    <li><i class="fa-solid fa-check"></i> Cyka AI Terms Of Service</li>
-                                    <li><i class="fa-solid fa-check"></i> Cyka AI Privacy Policy</li>
-                                    <li><i class="fa-solid fa-check"></i> Cyka AI One Pager</li>
-                                </ul>
-                            </div>
-                            <div class="link-box"><a href="/whitepaper/CykaAl_White_Paper.pdf" download="" class="theme-btn btn-style-one"><span class="txt">Download Cyka AI Documents <i class="fa-solid fa-caret-down"></i></span></a></div>
-                      
+ <!-- Documents Section -->
+<section class="docs-section" id="documents">
+    <div class="auto-container">
+        <div class="inner-container">
+            <div class="row clearfix">
+                <!-- Text Column -->
+                <div class="text-col col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner">
+                        <div class="title-box">
+                            <h6 class="subtitle"><span id="cyka-ai-whitepaper">Cyka AI Whitepaper</span></h6>
+                            <h2 id="explore-documents">Explore Cyka AI Documents</h2>
+                            <div class="text-content text" id="docs-description">Here are our documents that provide in-depth information about Cyka AI and its operations.</div>
+                        </div>
+                        <div class="lower-text">
+                            <ul class="clearfix" id="docs-list">
+                                <li><i class="fa-solid fa-check"></i> <span id="whitepaper">Cyka AI Whitepaper</span></li>
+                                <li><i class="fa-solid fa-check"></i> <span id="terms-of-service">Cyka AI Terms Of Service</span></li>
+                                <li><i class="fa-solid fa-check"></i> <span id="privacy-policy">Cyka AI Privacy Policy</span></li>
+                                <li><i class="fa-solid fa-check"></i> <span id="one-pager">Cyka AI One Pager</span></li>
+                            </ul>
+                        </div>
+                        <div class="link-box">
+                            <a href="/whitepaper/CykaAl_White_Paper.pdf" download="" class="theme-btn btn-style-one">
+                                <span class="txt" id="download-documents">Download Cyka AI Documents <i class="fa-solid fa-caret-down"></i></span>
+                            </a>
                         </div>
                     </div>
-                    <!--Image Column-->
-                    <div class="image-col col-lg-6 col-md-12 col-sm-12">
-                        <div class="inner">
-                            <div class="image">
-                                <img src="images/resource/f-image-1.jpg" alt="">
-                            </div>
+                </div>
+                <!-- Image Column -->
+                <div class="image-col col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner">
+                        <div class="image">
+                            <img src="images/resource/f-image-1.jpg" alt="" id="docs-image">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
     
     <br>
     <br>
     <br>
 
-    <!--FAQs Section-->
-    <section class="faqs-section">
-        <div class="auto-container">
-            <div class="inner-container">
-                <div class="title-box">
-                    <h6 class="subtitle"><span>FAQs</span></h6>
-                    <h2>Frequently Asked Questions</h2>
-                </div>
-                <div class="row clearfix">
-                    <!--Text Column-->
-                    <div class="text-col col-xl-6 col-lg-12 col-md-12 col-sm-12">
-                        <div class="inner">
-                            <div class="tabs-box">
-                                <div class="tab-buttons">
-                                    <ul class="clearfix">
-                                        <li class="tab-btn active-btn" data-tab="#f-tab-1"><span>General AI</span></li>
-                                        <li class="tab-btn" data-tab="#f-tab-2"><span>Cyka AI</span></li>
-                                    </ul>
-                                </div>
-                                <div class="tabs-content">
-                                    <!--Tab 1 - General AI-->
-                                    <div class="tab active-tab" id="f-tab-1">
-                                        <div class="tab-inner">
-                                            <div class="accordion-box clearfix">
-                                                <div class="accordion block">
-                                                    <div class="acc-btn">What is Artificial Intelligence (AI)? <i class="fa-regular fa-angle-down"></i></div>
-                                                    <div class="acc-content">
-                                                        <div class="content">
-                                                            <div class="text">Artificial Intelligence (AI) refers to the simulation of human intelligence in machines that are programmed to think, learn, and solve problems.</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="accordion block">
-                                                    <div class="acc-btn">How does AI benefit businesses? <i class="fa-regular fa-angle-down"></i></div>
-                                                    <div class="acc-content">
-                                                        <div class="content">
-                                                            <div class="text">AI benefits businesses by automating tasks, improving decision-making, enhancing customer experiences, and increasing efficiency.</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="accordion block">
-                                                    <div class="acc-btn">What are the types of AI? <i class="fa-regular fa-angle-down"></i></div>
-                                                    <div class="acc-content">
-                                                        <div class="content">
-                                                            <div class="text">The types of AI include narrow AI (focused on specific tasks), general AI (human-like intelligence), and superintelligent AI (exceeding human intelligence).</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="accordion block">
-                                                    <div class="acc-btn">What are the key features of General AI? <i class="fa-regular fa-angle-down"></i></div>
-                                                    <div class="acc-content">
-                                                        <div class="content">
-                                                            <div class="text">General AI exhibits key features such as adaptability, learning ability, problem-solving skills, natural language processing, and decision-making capabilities across diverse domains.</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Tab 2 - Cyka AI-->
-                                    <div class="tab" id="f-tab-2">
-                                        <div class="tab-inner">
-                                            <div class="accordion-box clearfix">
-                                                <div class="accordion block">
-                                                    <div class="acc-btn">What is Cyka AI? <i class="fa-regular fa-angle-down"></i></div>
-                                                    <div class="acc-content">
-                                                        <div class="content">
-                                                            <div class="text">Cyka AI is an advanced artificial intelligence tool designed for specific business needs, offering personalized content writing and partnership capabilities.</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="accordion block">
-                                                    <div class="acc-btn">How can Cyka AI improve content creation? <i class="fa-regular fa-angle-down"></i></div>
-                                                    <div class="acc-content">
-                                                        <div class="content">
-                                                            <div class="text">Cyka AI improves content creation by generating high-quality articles, website copy, landing pages, and digital ads in seconds, enhancing traffic and productivity.</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="accordion block">
-                                                    <div class="acc-btn">What industries can benefit from Cyka AI? <i class="fa-regular fa-angle-down"></i></div>
-                                                    <div class="acc-content">
-                                                        <div class="content">
-                                                            <div class="text">Various industries such as marketing, e-commerce, education, and healthcare can benefit from Cyka AI's capabilities in content generation, data analysis, and decision support.</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="accordion block">
-                                                    <div class="acc-btn">How does Cyka AI ensure data security and privacy? <i class="fa-regular fa-angle-down"></i></div>
-                                                    <div class="acc-content">
-                                                        <div class="content">
-                                                            <div class="text">Cyka AI ensures data security and privacy through encryption protocols, access controls, anonymization techniques, and compliance with data protection regulations.</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+  <!--gallery Section-->
+<!-- Gallery Section -->
+<section class="docs-two" id="Gallery">
+    <div class="bg-layer"></div>
+    <div class="auto-container">
+        <div class="title-box-two alt light centered">
+            <h2 id="gallery-title">Gallery</h2>
+            <div class="text-content" id="gallery-description">Explore AI-generated photos showcasing the creativity and capabilities of artificial intelligence.</div>
+        </div>
+        <div class="row clearfix gallery-container">
+            <!-- Gallery Block -->
+            <div class="gallery-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box">
+                    <div class="image-box">
+                        <img src="/images/gallery/robot.jpg" alt="AI Generated Photo 1" id="gallery-image-1">
+                        <div class="image-overlay">
+                            <div class="overlay-text" id="overlay-text-1">A robot figure made by Cyka AI</div>
                         </div>
                     </div>
-                    <!--Image Column-->
-                    <div class="image-col col-xl-6 col-lg-12 col-md-12 col-sm-12">
-                        <div class="inner">
-                            <div class="image">
-                                <img src="images/resource/f-image-2.png" alt="">
-                            </div>
+                </div>
+            </div>
+
+            <!-- Repeat similar blocks for other images -->
+            <div class="gallery-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box">
+                    <div class="image-box">
+                        <img src="/images/gallery/art-2.jpg" alt="AI Generated Photo 2" id="gallery-image-2">
+                        <div class="image-overlay">
+                            <div class="overlay-text" id="overlay-text-2">A vector of an employee figure made by Cyka AI</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box">
+                    <div class="image-box">
+                        <img src="/images/gallery/art.jpg" alt="AI Generated Photo 3" id="gallery-image-3">
+                        <div class="image-overlay">
+                            <div class="overlay-text" id="overlay-text-3">Smart Cities and Innovation: Technology-Themed Drawings</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Row -->
+            <div class="gallery-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box">
+                    <div class="image-box">
+                        <img src="/images/gallery/robot-2.jpg" alt="AI Generated Photo 4" id="gallery-image-4">
+                        <div class="image-overlay">
+                            <div class="overlay-text" id="overlay-text-4">Industry 4.0: Robots and Automation</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box">
+                    <div class="image-box">
+                        <img src="/images/gallery/robot-3.jpg" alt="AI Generated Photo 5" id="gallery-image-5">
+                        <div class="image-overlay">
+                            <div class="overlay-text" id="overlay-text-5">Robots and Data: AI Illustrations</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box">
+                    <div class="image-box">
+                        <img src="/images/gallery/work.jpg" alt="AI Generated Photo 6" id="gallery-image-6">
+                        <div class="image-overlay">
+                            <div class="overlay-text" id="overlay-text-6">Navigating the Data World: AI Illustrations</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    
-    
+    </div>
+</section>
+
+
+
+
+
+    <!--FAQs Section-->
+<!-- FAQs Section -->
+<section class="faqs-section" id="faqs">
+    <div class="auto-container">
+        <div class="inner-container">
+            <div class="title-box">
+                <h6 class="subtitle"><span id="faqs-subtitle">FAQs</span></h6>
+                <h2 id="faqs-title">Frequently Asked Questions</h2>
+            </div>
+            <div class="row clearfix">
+                <!-- Text Column -->
+                <div class="text-col col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                    <div class="inner">
+                        <div class="tabs-box">
+                            <div class="tab-buttons">
+                                <ul class="clearfix">
+                                    <li class="tab-btn active-btn" data-tab="#f-tab-1"><span id="tab-general-ai">General AI</span></li>
+                                    <li class="tab-btn" data-tab="#f-tab-2"><span id="tab-cyka-ai">Cyka AI</span></li>
+                                </ul>
+                            </div>
+                            <div class="tabs-content">
+                                <!-- Tab 1 - General AI -->
+                                <div class="tab active-tab" id="f-tab-1">
+                                    <div class="tab-inner">
+                                        <div class="accordion-box clearfix">
+                                            <div class="accordion block">
+                                                <div class="acc-btn" id="faq-q1">What is Artificial Intelligence (AI)? <i class="fa-regular fa-angle-down"></i></div>
+                                                <div class="acc-content">
+                                                    <div class="content">
+                                                        <div class="text" id="faq-a1">Artificial Intelligence (AI) refers to the simulation of human intelligence in machines that are programmed to think, learn, and solve problems.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion block">
+                                                <div class="acc-btn" id="faq-q2">How does AI benefit businesses? <i class="fa-regular fa-angle-down"></i></div>
+                                                <div class="acc-content">
+                                                    <div class="content">
+                                                        <div class="text" id="faq-a2">AI benefits businesses by automating tasks, improving decision-making, enhancing customer experiences, and increasing efficiency.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion block">
+                                                <div class="acc-btn" id="faq-q3">What are the types of AI? <i class="fa-regular fa-angle-down"></i></div>
+                                                <div class="acc-content">
+                                                    <div class="content">
+                                                        <div class="text" id="faq-a3">The types of AI include narrow AI (focused on specific tasks), general AI (human-like intelligence), and superintelligent AI (exceeding human intelligence).</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion block">
+                                                <div class="acc-btn" id="faq-q4">What are the key features of General AI? <i class="fa-regular fa-angle-down"></i></div>
+                                                <div class="acc-content">
+                                                    <div class="content">
+                                                        <div class="text" id="faq-a4">General AI exhibits key features such as adaptability, learning ability, problem-solving skills, natural language processing, and decision-making capabilities across diverse domains.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Tab 2 - Cyka AI -->
+                                <div class="tab" id="f-tab-2">
+                                    <div class="tab-inner">
+                                        <div class="accordion-box clearfix">
+                                            <div class="accordion block">
+                                                <div class="acc-btn" id="faq-q5">What is Cyka AI? <i class="fa-regular fa-angle-down"></i></div>
+                                                <div class="acc-content">
+                                                    <div class="content">
+                                                        <div class="text" id="faq-a5">Cyka AI is an advanced artificial intelligence tool designed for specific business needs, offering personalized content writing and partnership capabilities.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion block">
+                                                <div class="acc-btn" id="faq-q6">How can Cyka AI improve content creation? <i class="fa-regular fa-angle-down"></i></div>
+                                                <div class="acc-content">
+                                                    <div class="content">
+                                                        <div class="text" id="faq-a6">Cyka AI improves content creation by generating high-quality articles, website copy, landing pages, and digital ads in seconds, enhancing traffic and productivity.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion block">
+                                                <div class="acc-btn" id="faq-q7">What industries can benefit from Cyka AI? <i class="fa-regular fa-angle-down"></i></div>
+                                                <div class="acc-content">
+                                                    <div class="content">
+                                                        <div class="text" id="faq-a7">Various industries such as marketing, e-commerce, education, and healthcare can benefit from Cyka AI's capabilities in content generation, data analysis, and decision support.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion block">
+                                                <div class="acc-btn" id="faq-q8">How does Cyka AI ensure data security and privacy? <i class="fa-regular fa-angle-down"></i></div>
+                                                <div class="acc-content">
+                                                    <div class="content">
+                                                        <div class="text" id="faq-a8">Cyka AI ensures data security and privacy through encryption protocols, access controls, anonymization techniques, and compliance with data protection regulations.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image Column -->
+                <div class="image-col col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                    <div class="inner">
+                        <div class="image">
+                            <img src="images/resource/f-image-2.png" alt="FAQ Image" id="faq-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!--
+    <section id="references">
+    <div class="container">
+        <div class="logos">
+            <div class="logo-item">
+                <img src="logo1.png" alt="Referans 1">
+            </div>
+            <div class="logo-item">
+                <img src="logo2.png" alt="Referans 2">
+            </div>
+            <div class="logo-item">
+                <img src="logo3.png" alt="Referans 3">
+            </div>
+            <div class="logo-item">
+                <img src="logo4.png" alt="Referans 4">
+            </div>
+            <div class="logo-item">
+                <img src="logo5.png" alt="Referans 5">
+            </div>
+        </div>
+    </div>
+-->
 
     <!--Contact Section-->
 <section class="contact-section" id="contact-section">
     <div class="bg-pattern" style="background-image: url('images/background/pattern-2.png');"></div>
     <div class="auto-container">
         <div class="title-box centered">
-            <h6 class="subtitle"><span>Contact</span></h6>
-            <h2>Contact Cyka AI</h2>
+            <h6 class="subtitle"><span id="contact-subtitle">Contact</span></h6>
+            <h2 id="contact-title">Contact Cyka AI</h2>
         </div>
         <div class="info-box">
             <ul class="info clearfix">
-                <li class="email"><i class="icon fa-solid fa-envelope"></i><a href="mailto:cykaalalal@gmail.com">cykaalalal@gmail.com</a></li>
-                <li class="phone"><i class="icon fa-solid fa-phone"></i><a href="tel:+840977425031">+84 0977425031</a></li>
-                <li class="social"><i class="icon fa-solid fa-paper-plane"></i><a href="#">Join us on Telegram</a></li>
+                <li class="email"><i class="icon fa-solid fa-envelope" id="contact-email-icon"></i><a href="mailto:contact@cykaal.com" id="contact-email">contact@cykaal.com</a></li>
+                <li class="phone"><i class="icon fa-solid fa-phone" id="contact-phone-icon"></i><a href="tel:+44207223309" id="contact-phone">+44207223309</a></li>
+                <li class="social"><i class="icon fa-solid fa-paper-plane" id="contact-social-icon"></i><a href="https://t.me/cykaAlcom" id="contact-telegram">Join us on Telegram</a></li>
             </ul>
         </div>
+        <!-- Form Box (commented out) -->
+        <!--
         <div class="form-box contact-form default-form">
             <form method="post" action="/">
                 <div class="row clearfix">
@@ -758,35 +1063,35 @@
                 </div>
             </form>
         </div>
+        -->
     </div>
 </section>
 
+<!-- Main Footer -->
+<footer class="main-footer" id="footer">
+    <div class="footer-upper">
+        <div class="auto-container">
+            <h2 id="footer-updates">Stay updated with Cyka AI</h2>
+            <div class="social-links">
+                <ul class="social clearfix">
+                    <li><a target="_blank" href="https://www.facebook.com/profile.php?id=61563024500284" class="fab fa-facebook-f" id="social-facebook"></a></li>
+                    <li><a target="_blank" href="https://x.com/cyka_al?s=11" class="fab fa-twitter" id="social-twitter"></a></li>
+                    <li><a target="_blank" href="https://www.instagram.com/cykaall?igsh=czhrc3RncW13a2t6&utm_source=qr" class="fab fa-instagram" id="social-instagram"></a></li>
+                    <li><a target="_blank" title="Coming Soon..." href="#" class="fab fa-linkedin-in" id="social-linkedin"></a></li>
+                    <li><a target="_blank" title="Coming Soon..." href="#" class="fab fa-youtube" id="social-youtube"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="auto-container">
+            <div class="inner">
+                <div class="copyright" id="footer-copyright">Copyright &copy; 2024. All rights reserved by Cyka AI.</div>
+            </div>
+        </div>
+    </div>
+</footer>
 
-    <!--Main Footer-->
-    <footer class="main-footer">
-        <div class="footer-upper">
-            <div class="auto-container">
-                <h2>Stay updated with Cyka AI</h2>
-                <div class="social-links">
-                    <ul class="social clearfix">
-                        <li><a target="_blank" href="#" class="fab fa-facebook-f"></a></li>
-                        <li><a target="_blank" href="#" class="fab fa-twitter"></a></li>
-                        <li><a target="_blank" href="#" class="fab fa-instagram"></a></li>
-                        <li><a target="_blank" href="#" class="fab fa-linkedin-in"></a></li>
-                        <li><a target="_blank" href="#" class="fab fa-youtube"></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="auto-container">
-                <div class="inner">
-                    <div class="copyright">Copyright &copy; 2024. All rights reserved by Cyka AI.</div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    
 
 </div>
 <!--End pagewrapper--> 
@@ -821,23 +1126,64 @@ window.addEventListener('scroll', () => {
         image.classList.remove('hidden');
     }
 });
+
+const translations = {};
+
+function loadTranslations(lang) {
+  fetch(`locales/${lang}.json`)
+    .then(response => response.json())
+    .then(data => {
+      translations[lang] = data;
+      applyTranslations(lang);
+    });
+}
+
+function applyTranslations(lang) {
+  const elements = document.querySelectorAll('[data-i18n]');
+
+  elements.forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    element.textContent = translations[lang][key] || key;
+  });
+
+  // Update page title
+}
+
+function changeLanguage(lang) {
+    fetch(`/locales/${lang}.json`)
+        .then(response => response.json())
+        .then(data => {
+            document.querySelectorAll('[id]').forEach(element => {
+                const key = element.id;
+                if (data[key]) {
+                    element.textContent = data[key];
+                }
+            });
+        })
+        .catch(error => console.error('Error loading language file:', error));
+}
+
+// Load default language
+loadTranslations('en');
+
 </script>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.rawgit.com/hilios/jQuery.countdown/2.2.0/dist/jquery.countdown.min.js"></script>
 
-<script src="js/server.js"></script>
-<script src="js/jquery.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/PageScroll.js"></script>
-<script src="js/owl.js"></script>
-<script src="js/bxslider.js"></script>
-<script src="js/countdown.js"></script>
-<script src="js/jquery.fancybox.js"></script>
-<script src="js/jquery-ui.js"></script>
-<script src="js/appear.js"></script>
-<script src="js/wow.js"></script>
-<script src="js/custom-script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/js/server.js"></script>
+<script src="/js/jquery.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/PageScroll.js"></script>
+<script src="/js/owl.js"></script>
+<script src="/js/bxslider.js"></script>
+<script src="/js/countdown.js"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/jquery-ui.js"></script>
+<script src="/js/appear.js"></script>
+<script src="/js/wow.js"></script>
+<script src="/js/custom-script.js"></script>
+<script src="/js/lang.js" defer></script>
 </body>
 </html>

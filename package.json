@@ -8,10 +8,14 @@
     "fs": "^0.0.1-security",
     "hbs": "^4.2.0",
     "https": "^1.0.0",
+    "i18next": "^23.12.2",
+    "i18next-browser-languagedetector": "^8.0.0",
+    "i18next-http-backend": "^2.5.2",
     "jsonwebtoken": "^9.0.2",
     "mysql": "^2.18.1",
     "nodemon": "^3.1.4",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "react-i18next": "^15.0.0"
   },
   "name": "ico-nft-ai-landing-page-template-cryptlight-2023-12-19-04-39-54-utc",
   "version": "1.0.0",

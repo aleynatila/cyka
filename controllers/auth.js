@@ -48,16 +48,15 @@ exports.login = async (req, res) => {
                 };
 
                 res.cookie('jwt', token, cookieOptions);
-                res.status(200).redirect("/");
+                res.status(200).redirect("/auth/dashboard");
             }
-
         });
-
     } catch (error) {
         console.log(error);
         res.status(500).send('Server error');
     }
 };
+
 
 exports.register = async (req, res) => {
     console.log(req.body);
@@ -144,3 +143,4 @@ exports.isLoggedIn = async (req, res, next) => {
         next();
     }
 };
+

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>Cyka AI - Be Always a Step Ahead</title>
+
+<!-- Stylesheets -->
+<link href="/css/bootstrap.css" rel="stylesheet">
+<link href="/css/style.css" rel="stylesheet">
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+<link rel="icon" href="/images/favicon.png" type="image/x-icon">
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<link href="/css/responsive.css" rel="stylesheet">
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]--> 
+
+</head>
+
+<body class="home-one">
+  <div class="page-wrapper"> 
+
+    <!-- Preloader -->
+
+    <div class="preloader"></div> 
+    <!-- Main Header-->
+     
+        <header class="main-header header-one">
+        <!-- Header Upper -->
+        <div class="header-upper">        
+            <div class="auto-container">
+                <!-- Main Box -->
+                <div class="main-box clearfix">
+                    <!--Logo-->
+                    <div class="logo-box clearfix">
+                         <div class="logo"><a href="/" title="CykaAI"><img src="/images/logo-1.png" alt="" title="CykaAI"></a></div>
+                         <div class="lang-box">
+                            <a href="#" class="theme-btn lang-btn">EN <i class="arrow fa fa-caret-down"></i></a
+                            >
+                            <ul class="lang-list">
+                                <li><a href="/cryplight-package/index-tr.html">Tr</a></li>
+                                <li><a href="/cryplight-package/index-es.html">Es</a></li>
+                                <li><a href="/cryplight-package/index-ru.html">Ru</a></li>
+                                <li><a href="/cryplight-package/index-de.html">De</a></li>
+                            </ul>
+                         </div>
+                    </div>
+
+                    <div class="nav-box clearfix">
+                        <!--Nav Outer-->
+                        <div class="nav-outer clearfix">         
+                            <nav class="main-menu">
+                                <ul class="navigation clearfix" id="scroll-nav">
+                                 <li><a href="/dashboard">Home</a></li>
+                      <li><a href="/transactions">Transaction</a></li>
+                      <li><a href="#documents">Whitepaper</a></li>
+                      <li><a href="#roadmap">Roadmap</a></li>
+                    <li><a href="#contact-section">Contact</a></li>
+                                </ul>
+                            </nav>
+                            <!-- Main Menu End-->                        </div>
+                        <!--Nav Outer End-->
+   {{#if user}}
+                        <div class="links-box clearfix">
+                             <div class="link"><a href="/auth/dashboard" class="theme-btn btn-style-two"><span class="txt">Hello, {{user.name}}</span></a></div>
+                            <div class="link"><a href="/auth/logout" class="theme-btn btn-style-two"><span class="txt">Logout</span></a></div>
+                        
+                        </div>
+   {{else}}
+      <div class="links-box clearfix">
+                            <div class="link"><a href="/register" class="theme-btn btn-style-one" style="
+    padding-left: 25px;
+"><span class="txt">Sign up</span></a></div>
+                            <div class="link"><a href="/login" class="theme-btn btn-style-two"><span class="txt">Login</span></a></div>
+                        </div>
+   {{/if}}
+
+                        <!-- Hidden Nav Toggler -->
+                        <div class="nav-toggler">
+                            <button class="hidden-bar-opener"><span class="icon"><i class="fa-regular fa-bars"></i></span></button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--End Main Header -->
+
+    
+    <!--Menu Backdrop-->
+    <div class="menu-backdrop"></div>
+
+    <!-- Hidden Navigation Bar -->
+    <section class="hidden-bar">
+        <!-- Hidden Bar Wrapper -->
+        <div class="hidden-bar-wrapper">
+            <div class="hidden-bar-closer"><span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14"><path d="M15 0L1 14m14 0L1 0" stroke="#101010" fill="none" fill-rule="evenodd"></path></svg></span></div>
+            <div class="nav-logo-box">
+                <div class="logo"><a href="/" title="CykaAI"><img src="/images/logo-1.png" alt="" title="CykaAI"></a></div>
+            </div>
+            <!-- .Side-menu -->
+            <div class="side-menu">
+                 <ul class="navigation custom-links clearfix" id="scroll-nav-2">
+                    <li><a href="/dashboard">Home</a></li>
+                      <li><a href="/transactions">Transaction</a></li>
+                      <li><a href="#documents">Whitepaper</a></li>
+                      <li><a href="#roadmap">Roadmap</a></li>
+                    <li><a href="#contact-section">Contact</a></li>
+                </ul>
+            </div><!-- /.Side-menu -->
+            
+            <div class="links-box clearfix">
+                <div class="clearfix">
+                    <div class="link"><a href="/register" class="theme-btn btn-style-one"><span class="txt">Sign up</span></a></div>
+                    <div class="link"><a href="/login" class="theme-btn btn-style-two"><span class="txt">Login</span></a></div>
+                </div>
+            </div>
+        
+        </div><!-- / Hidden Bar Wrapper -->
+    </section>
+    
+    <!-- / Hidden Bar -->
+
+   <!--Allocation Section-->
+    <br>
+   <br>
+   <br>
+  <section class="allocation-section" style="padding-top: 50px;">
+
+     
+        <div class="auto-container">
+            <div class="price-box clearfix" style="margin-bottom: 10px; padding-bottom: 0px;
+">
+                <div class="card revenue-card" style="margin-top: 20px;margin-bottom: 20px;background-color: #373663;box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);margin-right: 0px;margin-left: 0px;padding-right: 100px; border-top-right-radius: 0px;border-bottom-right-radius: 0px;" >
+
+          <p class="card-title" style="color: white;">Token Balance</p>
+
+          <data class="card-price" style="background-color: white; color: #201f3a; font-weight: 900; padding: 5px; border-radius: 8px; width: fit-content;" id="userBalance">0 ckAl</data>
+
+          <p class="card-text">Total</p>
+
+        </div>
+            <div class="price-box clearfix" style="text-align: center;margin-bottom: 0px;padding-bottom: 0px;">
+                <div class="card revenue-card" style="text-align: center; margin-top: 20px;margin-bottom: 20px;background-color: #201f3a;box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);flex-direction:row;padding-top: 20px; border-top-left-radius: 0px;border-bottom-left-radius: 0px;">
+        <div class="price"><span>1 ckAl = 0.50 $</span></div>
+                <div class="link-box"><a href="/payment" class="theme-btn btn-style-one" style="top: 5px;" <span="">Buy now</a></div>
+
+        </div>
+            </div></div>
+              
+
+<div class="courses-container" style="
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 0px;
+">
+         <div class="course" id="pack-div" style="width: 110%;padding-right: 60px;">
+            <div class="course-info">
+              <p class="card-title" style="  ">Token Sales Progress</p>
+              <div class="progress-container">
+
+                <div style="display: flex; justify-content: space-between; ">
+                  <div>
+                    <span id="progress-text2" class="progress-text" style="font-size: 10px; font-weight: 600; color: #ffffffb7;">RAISED AMOUNT
+                    </span>
+                    <span id="progress-text0" class="progress-text" style="text-align: left; font-weight: 600;    font-size: 16px">32450 USD</span>
+                  </div>
+
+                  <div style="text-align: right; align-items: right; display: grid;">
+                    <span id="progress-text2" class="progress-text" style="font-size: 10px; font-weight: 600; color: #ffffffb7; text-align: right;">TOTAL TOKEN
+                    </span>
+                    <span id="progress-text1" class="progress-text" style="text-align: right; font-weight: 600;    font-size: 16px;">100000 USD</span>
+                  </div>
+                </div>
+                <div style="background-color: rgb(214, 214, 214); border-radius: 6px;">
+                  <div id="progress1" class="progress" style="margin-top: 10px; background-color: rgb(55 114 255); width: 32.45%;"></div>
+                </div>
+              </div>
+              <div style="display: grid;">
+                <b style="   font-weight: 500; margin-top: 20px; font-size: 14px; font-weight: 500;">
+                  <b style="color: #ffffff; font-weight: 600; font-size: 15px;">STAGE 3
+                  </b> RUNNING NOW!
+                </b>
+                <b style="   font-weight: 500; margin-top: 10px; font-size: 13px; font-weight: 500;">TIME
+                  LEFT:</b>
+                  <h6 style="margin-top: 0px;">SALES ENDS IN</h6>
+              </div>
+                <div class="countdown">
+                  <div class="time-box">
+                    <div id="days" class="time">6</div>
+                    <div class="label">DAY</div>
+                  </div>
+                  <div class="time-box">
+                    <div id="hours" class="time">3</div>
+                    <div class="label">HOUR</div>
+                  </div>
+                  <div class="time-box">
+                    <div id="minutes" class="time">54</div>
+                    <div class="label">MIN</div>
+                  </div>
+                  <div class="time-box">
+                    <div id="seconds" class="time">5</div>
+                    <div class="label">SEC</div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+
+            <div class="tabs-box">
+                <div class="tab-buttons">
+                    <ul class="clearfix">
+                        <li class="tab-btn active-btn" data-tab="#tab-1"><span>Token Distrubution</span></li>
+                       <!-- <li class="tab-btn" data-tab="#tab-2"><span>Token Allocation</span></li>-->
+                    </ul>
+                </div>
+                <div class="tabs-content">
+   <div class="bg-circles"><img src="/images/resource/circles.png" alt=""></div>
+        <div class="pattern-layer"><img src="/images/resource/allo-pattern.png" alt=""></div>
+        
+                    <!--Tab-->
+                   <div class="tab active-tab" id="tab-1">
+    <div class="inner">
+        <div class="row clearfix">
+            <!--Image Col-->
+            <div class="image-col col-lg-6 col-md-6 col-sm-12">
+                <div class="inner">
+                    <div class="image"><img src="/images/graph.png" alt=""></div>
+                </div>
+            </div>
+            <!--Text Col-->
+            <div class="text-col col-lg-6 col-md-6 col-sm-12" style="margin-top:50px ;">
+                <div class="inner">
+                    <div class="progress-box">
+                        <div class="bar-block">
+                            <div class="bar-legend">Community: 40%</div>
+                            <div class="prog-bar color-1">
+                                <div class="bar-inner" style="width: 40%;"></div>
+                            </div>
+                        </div>
+                        <div class="bar-block">
+                            <div class="bar-legend">Partnership: 20%</div>
+                            <div class="prog-bar color-2">
+                                <div class="bar-inner" style="width: 20%;"></div>
+                            </div>
+                        </div>
+                        <div class="bar-block">
+                            <div class="bar-legend">Marketing: 15%</div>
+                            <div class="prog-bar color-3">
+                                <div class="bar-inner" style="width: 15%;"></div>
+                            </div>
+                        </div>
+                        <div class="bar-block">
+                            <div class="bar-legend">Team: 10%</div>
+                            <div class="prog-bar color-4">
+                                <div class="bar-inner" style="width: 10%;"></div>
+                            </div>
+                        </div>
+                        <div class="bar-block">
+                            <div class="bar-legend">Presale: 15%</div>
+                            <div class="prog-bar color-5">
+                                <div class="bar-inner" style="width: 15%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="docs-section" id="documents">
+        <div class="auto-container">
+            <div class="inner-container">
+                <div class="row clearfix">
+                    <!--Text Column-->
+                    <div class="text-col col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner">
+                            <div class="title-box">
+                                <h6 class="subtitle"><span>Cyka AI Whitepaper</span></h6>
+                                <h2>Explore Cyka AI Documents</h2>
+                                <div class="text-content text">Here are our documents that provide in-depth information about Cyka AI and its operations.</div>
+                            </div>
+                            <div class="lower-text">
+                                <ul class="clearfix">
+                                    <li><i class="fa-solid fa-check"></i> Cyka AI Whitepaper</li>
+                                    <li><i class="fa-solid fa-check"></i> Cyka AI Terms Of Service</li>
+                                    <li><i class="fa-solid fa-check"></i> Cyka AI Privacy Policy</li>
+                                    <li><i class="fa-solid fa-check"></i> Cyka AI One Pager</li>
+                                </ul>
+                            </div>
+                            <div class="link-box"><a href="/whitepaper/CykaAl_White_Paper.pdf" download="" class="theme-btn btn-style-one"><span class="txt">Download Cyka AI Documents <i class="fa-solid fa-caret-down"></i></span></a></div>
+                      
+                        </div>
+                    </div>
+                    <!--Image Column-->
+                    <div class="image-col col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner">
+                            <div class="image">
+                                <img src="/images/resource/f-image-1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+    </section>
+
+    <!--FAQs Section-->
+    <section class="faqs-section">
+        <div class="auto-container">
+            <div class="inner-container">
+                <div class="title-box">
+                    <h6 class="subtitle"><span>FAQs</span></h6>
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                <div class="row clearfix">
+                    <!--Text Column-->
+                    <div class="text-col col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                        <div class="inner">
+                            <div class="tabs-box">
+                                <div class="tab-buttons">
+                                    <ul class="clearfix">
+                                        <li class="tab-btn active-btn" data-tab="#f-tab-1"><span>General AI</span></li>
+                                        <li class="tab-btn" data-tab="#f-tab-2"><span>Cyka AI</span></li>
+                                    </ul>
+                                </div>
+                                <div class="tabs-content">
+                                    <!--Tab 1 - General AI-->
+                                    <div class="tab active-tab" id="f-tab-1">
+                                        <div class="tab-inner">
+                                            <div class="accordion-box clearfix">
+                                                <div class="accordion block">
+                                                    <div class="acc-btn">What is Artificial Intelligence (AI)? <i class="fa-regular fa-angle-down"></i></div>
+                                                    <div class="acc-content">
+                                                        <div class="content">
+                                                            <div class="text">Artificial Intelligence (AI) refers to the simulation of human intelligence in machines that are programmed to think, learn, and solve problems.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion block">
+                                                    <div class="acc-btn">How does AI benefit businesses? <i class="fa-regular fa-angle-down"></i></div>
+                                                    <div class="acc-content">
+                                                        <div class="content">
+                                                            <div class="text">AI benefits businesses by automating tasks, improving decision-making, enhancing customer experiences, and increasing efficiency.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion block">
+                                                    <div class="acc-btn">What are the types of AI? <i class="fa-regular fa-angle-down"></i></div>
+                                                    <div class="acc-content">
+                                                        <div class="content">
+                                                            <div class="text">The types of AI include narrow AI (focused on specific tasks), general AI (human-like intelligence), and superintelligent AI (exceeding human intelligence).</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion block">
+                                                    <div class="acc-btn">What are the key features of General AI? <i class="fa-regular fa-angle-down"></i></div>
+                                                    <div class="acc-content">
+                                                        <div class="content">
+                                                            <div class="text">General AI exhibits key features such as adaptability, learning ability, problem-solving skills, natural language processing, and decision-making capabilities across diverse domains.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Tab 2 - Cyka AI-->
+                                    <div class="tab" id="f-tab-2">
+                                        <div class="tab-inner">
+                                            <div class="accordion-box clearfix">
+                                                <div class="accordion block">
+                                                    <div class="acc-btn">What is Cyka AI? <i class="fa-regular fa-angle-down"></i></div>
+                                                    <div class="acc-content">
+                                                        <div class="content">
+                                                            <div class="text">Cyka AI is an advanced artificial intelligence tool designed for specific business needs, offering personalized content writing and partnership capabilities.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion block">
+                                                    <div class="acc-btn">How can Cyka AI improve content creation? <i class="fa-regular fa-angle-down"></i></div>
+                                                    <div class="acc-content">
+                                                        <div class="content">
+                                                            <div class="text">Cyka AI improves content creation by generating high-quality articles, website copy, landing pages, and digital ads in seconds, enhancing traffic and productivity.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion block">
+                                                    <div class="acc-btn">What industries can benefit from Cyka AI? <i class="fa-regular fa-angle-down"></i></div>
+                                                    <div class="acc-content">
+                                                        <div class="content">
+                                                            <div class="text">Various industries such as marketing, e-commerce, education, and healthcare can benefit from Cyka AI's capabilities in content generation, data analysis, and decision support.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion block">
+                                                    <div class="acc-btn">How does Cyka AI ensure data security and privacy? <i class="fa-regular fa-angle-down"></i></div>
+                                                    <div class="acc-content">
+                                                        <div class="content">
+                                                            <div class="text">Cyka AI ensures data security and privacy through encryption protocols, access controls, anonymization techniques, and compliance with data protection regulations.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Image Column-->
+                    <div class="image-col col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                        <div class="inner">
+                            <div class="image">
+                                <img src="/images/resource/f-image-2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <!--Contact Section-->
+<section class="contact-section" id="contact-section">
+    <div class="bg-pattern" style="background-image: url('images/background/pattern-2.png');"></div>
+    <div class="auto-container">
+        <div class="title-box centered">
+            <h6 class="subtitle"><span>Contact</span></h6>
+            <h2>Contact Cyka AI</h2>
+        </div>
+        <div class="info-box">
+            <ul class="info clearfix">
+                <li class="email"><i class="icon fa-solid fa-envelope"></i><a href="mailto:contact@cykaal.com">contact@cykaal.com</a></li>
+                <li class="phone"><i class="icon fa-solid fa-phone"></i><a href="tel: +44207223309"></a>+44207223309</a></li>
+                <li class="social"><i class="icon fa-solid fa-paper-plane"></i><a href="https://t.me/cykaAlcom">Join us on Telegram</a></li>
+            </ul>
+        </div>
+      <!--  <div class="form-box contact-form default-form">
+            <form method="post" action="/">
+                <div class="row clearfix">
+                    <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                        <div class="field-inner">
+                            <input type="text" name="username" value="" placeholder="First Name" required="">
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                        <div class="field-inner">
+                            <input type="text" name="lastname" value="" placeholder="Last Name" required="">
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                        <div class="field-inner">
+                            <input type="email" name="email" value="" placeholder="Email Address" required="">
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                        <div class="field-inner">
+                            <input type="text" name="phone" value="" placeholder="Phone Number" required="">
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                        <div class="field-inner">
+                            <textarea name="message" placeholder="Your Message ..." required=""></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                        <div class="text-center">
+                            <button class="theme-btn btn-style-one">
+                                <span class="btn-title">Submit your message</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>-->
+</section>
+
+
+    <!--Main Footer-->
+    <footer class="main-footer">
+        <div class="footer-upper">
+            <div class="auto-container">
+                <h2>Stay updated with Cyka AI</h2>
+                <div class="social-links">
+                    <ul class="social clearfix">
+                        <li><a target="_blank" href="https://www.facebook.com/profile.php?id=61563024500284" class="fab fa-facebook-f"></a></li>
+                        <li><a target="_blank" href="https://x.com/cyka_al?s=11" class="fab fa-twitter"></a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/cykaall?igsh=czhrc3RncW13a2t6&utm_source=qr" class="fab fa-instagram"></a></li>
+                        <li><a target="_blank" title="Coming Soon..." href="#" class="fab fa-linkedin-in"></a></li>
+                        <li><a target="_blank" title="Coming Soon..."href="#" class="fab fa-youtube"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="auto-container">
+                <div class="inner">
+                    <div class="copyright">Copyright &copy; 2024. All rights reserved by Cyka AI.</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+</div>
+<!--End pagewrapper--> 
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="icon"><img src="/images/icons/arrow-up.svg" alt="" title="Go To Top"></span></div>
+<script>
+      $(document).ready(function() {
+        var countdownDate = $('.time-countdown-two').data('countdown');
+        $('.time-countdown-two').countdown(countdownDate, function(event) {
+            $(this).html(event.strftime('%D gün %H:%M:%S'));
+        });
+    });
+</script>
+<script>
+    const image = document.getElementById('banner_ai');
+
+// Add a scroll event listener to the window
+window.addEventListener('scroll', () => {
+    // Get the scroll position
+    const scrollPosition = window.scrollY;
+
+    // Set the scroll threshold (in pixels)
+    const scrollThreshold = 200; // Adjust as needed
+
+    // Check if the scroll position exceeds the threshold
+    if (scrollPosition > scrollThreshold) {
+        // Add the hidden class to hide the image
+        image.classList.add('hidden');
+    } else {
+        // Remove the hidden class to show the image
+        image.classList.remove('hidden');
+    }
+});
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.rawgit.com/hilios/jQuery.countdown/2.2.0/dist/jquery.countdown.min.js"></script>
+
+<script src="/js/server.js"></script>
+<script src="/js/jquery.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/PageScroll.js"></script>
+<script src="/js/owl.js"></script>
+<script src="/js/bxslider.js"></script>
+<script src="/js/countdown.js"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/jquery-ui.js"></script>
+<script src="/js/appear.js"></script>
+<script src="/js/wow.js"></script>
+<script src="/js/custom-script.js"></script>
+</body>
+</html>
