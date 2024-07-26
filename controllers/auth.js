@@ -11,6 +11,16 @@ const db = mysql.createConnection({
     database: process.env.DATABASE
 });
 
+exports.logout = (req, res) => {
+    res.cookie('jwt', '', {
+        expires: new Date(Date.now() + 2 * 1000), // 2 saniye sonra çerez silinecek
+        httpOnly: true,
+    });
+
+    res.redirect('/login'); // Çıkış yaptıktan sonra login sayfasına yönlendirme
+};
+
+
 exports.login = async (req, res) => {
     try {
         const { email, password } = req.body;

@@ -51,4 +51,7 @@ router.get('/payment', authController.isLoggedIn, (req, res) => {
     }
   });
 
+  router.get('/logout', authController.logout);
+
+
 module.exports = router;
