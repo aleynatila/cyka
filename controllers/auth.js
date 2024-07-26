@@ -37,7 +37,7 @@ exports.login = async (req, res) => {
                 return res.status(500).send('Server error');
             }
 
-            if (!results || results.length === 0 || !(await bcrypt.compare(password, results[0].password))) {
+            if (!results || !(await bcrypt.compare(password, results[0].password))) {
                 return res.status(401).render('login', {
                     message: 'Email or Password is incorrect'
                 });
@@ -58,7 +58,7 @@ exports.login = async (req, res) => {
                 };
 
                 res.cookie('jwt', token, cookieOptions);
-                res.status(200).redirect("/auth/dashboard");
+                res.status(200).redirect("/dashboard"); // Doğru rota yönlendirmesi
             }
         });
     } catch (error) {
